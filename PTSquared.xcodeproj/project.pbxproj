@@ -8,12 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		847C830E1A10BE2500F913F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C830D1A10BE2500F913F2 /* main.m */; };
-		847C83111A10BE2500F913F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83101A10BE2500F913F2 /* AppDelegate.m */; };
-		847C83141A10BE2500F913F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83131A10BE2500F913F2 /* ViewController.m */; };
-		847C83171A10BE2500F913F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C83151A10BE2500F913F2 /* Main.storyboard */; };
-		847C83191A10BE2500F913F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847C83181A10BE2500F913F2 /* Images.xcassets */; };
+		847C83171A10BE2500F913F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C83151A10BE2500F913F2 /* Login.storyboard */; };
 		847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847C831A1A10BE2500F913F2 /* LaunchScreen.xib */; };
 		847C83281A10BE2500F913F2 /* PTSquaredTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83271A10BE2500F913F2 /* PTSquaredTests.m */; };
+		847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83321A10BF3300F913F2 /* AppDelegate.m */; };
+		847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C833B1A10BFD700F913F2 /* TrainerMode.storyboard */; };
+		847C833E1A10BFE700F913F2 /* ClientMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847C833D1A10BFE700F913F2 /* ClientMode.storyboard */; };
+		847C83401A10C02600F913F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847C833F1A10C02600F913F2 /* Images.xcassets */; };
+		847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C834C1A10C41300F913F2 /* PTCalendarAccessViewController.m */; };
+		847C83501A10C43100F913F2 /* PTClientLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C834F1A10C43100F913F2 /* PTClientLoginViewController.m */; };
+		847C83531A10C44000F913F2 /* PTClientRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83521A10C44000F913F2 /* PTClientRegistrationViewController.m */; };
+		847C83561A10C44F00F913F2 /* PTClientScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83551A10C44F00F913F2 /* PTClientScreenViewController.m */; };
+		847C83591A10C45900F913F2 /* PTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83581A10C45900F913F2 /* PTLoginViewController.m */; };
+		847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C835B1A10C46700F913F2 /* PTTrainerLoginViewController.m */; };
+		847C835F1A10C47100F913F2 /* PTValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C835E1A10C47100F913F2 /* PTValidationViewController.m */; };
+		847C836C1A10D33200F913F2 /* PTAddAttendeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C836B1A10D33200F913F2 /* PTAddAttendeeViewController.m */; };
+		847C836F1A10D34100F913F2 /* PTAttendeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C836E1A10D34100F913F2 /* PTAttendeesViewController.m */; };
+		847C83721A10D35600F913F2 /* PTHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83711A10D35600F913F2 /* PTHomeScreenViewController.m */; };
+		847C83751A10D36400F913F2 /* PTScanMembershipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83741A10D36400F913F2 /* PTScanMembershipViewController.m */; };
+		847C83781A10D37200F913F2 /* PTSessionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83771A10D37200F913F2 /* PTSessionDetailsViewController.m */; };
+		847C837B1A10D38000F913F2 /* PTTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C837A1A10D38000F913F2 /* PTTutorialViewController.m */; };
+		847C837E1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C837D1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m */; };
+		847C838F1A10DA4700F913F2 /* PTCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C838E1A10DA4700F913F2 /* PTCalendarViewController.m */; };
+		847C83921A10DA6500F913F2 /* PTCMHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83911A10DA6500F913F2 /* PTCMHomeScreenViewController.m */; };
+		847C83951A10DAA500F913F2 /* PTCMSessionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83941A10DAA500F913F2 /* PTCMSessionDetailsViewController.m */; };
+		847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83971A10DABF00F913F2 /* PTCMTutorialViewController.m */; };
+		847C839B1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C839A1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m */; };
+		847C839E1A10DAFB00F913F2 /* PTContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C839D1A10DAFB00F913F2 /* PTContainerViewController.m */; };
+		847C83A11A10DB1400F913F2 /* PTLogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A01A10DB1400F913F2 /* PTLogoutViewController.m */; };
+		847C83A41A10DB2C00F913F2 /* PTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A31A10DB2C00F913F2 /* PTMenuViewController.m */; };
+		847C83A71A10DB4300F913F2 /* PTNutritionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A61A10DB4300F913F2 /* PTNutritionDetailsViewController.m */; };
+		847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A91A10DB6300F913F2 /* PTNutritionViewController.m */; };
+		847C83AD1A10DB7800F913F2 /* PTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */; };
+		847C83B01A10DB9100F913F2 /* PTWorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +57,69 @@
 		847C83081A10BE2500F913F2 /* PTSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847C830C1A10BE2500F913F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847C830D1A10BE2500F913F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		847C830F1A10BE2500F913F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		847C83101A10BE2500F913F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		847C83121A10BE2500F913F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		847C83131A10BE2500F913F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		847C83161A10BE2500F913F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		847C83181A10BE2500F913F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		847C83161A10BE2500F913F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		847C831B1A10BE2500F913F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		847C83211A10BE2500F913F2 /* PTSquaredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTSquaredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847C83261A10BE2500F913F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847C83271A10BE2500F913F2 /* PTSquaredTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTSquaredTests.m; sourceTree = "<group>"; };
+		847C83311A10BF3300F913F2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		847C83321A10BF3300F913F2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		847C833B1A10BFD700F913F2 /* TrainerMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrainerMode.storyboard; sourceTree = "<group>"; };
+		847C833D1A10BFE700F913F2 /* ClientMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientMode.storyboard; sourceTree = "<group>"; };
+		847C833F1A10C02600F913F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		847C834B1A10C41300F913F2 /* PTCalendarAccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCalendarAccessViewController.h; sourceTree = "<group>"; };
+		847C834C1A10C41300F913F2 /* PTCalendarAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCalendarAccessViewController.m; sourceTree = "<group>"; };
+		847C834E1A10C43100F913F2 /* PTClientLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientLoginViewController.h; sourceTree = "<group>"; };
+		847C834F1A10C43100F913F2 /* PTClientLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientLoginViewController.m; sourceTree = "<group>"; };
+		847C83511A10C44000F913F2 /* PTClientRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientRegistrationViewController.h; sourceTree = "<group>"; };
+		847C83521A10C44000F913F2 /* PTClientRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientRegistrationViewController.m; sourceTree = "<group>"; };
+		847C83541A10C44F00F913F2 /* PTClientScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientScreenViewController.h; sourceTree = "<group>"; };
+		847C83551A10C44F00F913F2 /* PTClientScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientScreenViewController.m; sourceTree = "<group>"; };
+		847C83571A10C45900F913F2 /* PTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLoginViewController.h; sourceTree = "<group>"; };
+		847C83581A10C45900F913F2 /* PTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLoginViewController.m; sourceTree = "<group>"; };
+		847C835A1A10C46700F913F2 /* PTTrainerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTrainerLoginViewController.h; sourceTree = "<group>"; };
+		847C835B1A10C46700F913F2 /* PTTrainerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTrainerLoginViewController.m; sourceTree = "<group>"; };
+		847C835D1A10C47100F913F2 /* PTValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTValidationViewController.h; sourceTree = "<group>"; };
+		847C835E1A10C47100F913F2 /* PTValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTValidationViewController.m; sourceTree = "<group>"; };
+		847C836A1A10D33200F913F2 /* PTAddAttendeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddAttendeeViewController.h; sourceTree = "<group>"; };
+		847C836B1A10D33200F913F2 /* PTAddAttendeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddAttendeeViewController.m; sourceTree = "<group>"; };
+		847C836D1A10D34100F913F2 /* PTAttendeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAttendeesViewController.h; sourceTree = "<group>"; };
+		847C836E1A10D34100F913F2 /* PTAttendeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAttendeesViewController.m; sourceTree = "<group>"; };
+		847C83701A10D35600F913F2 /* PTHomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHomeScreenViewController.h; sourceTree = "<group>"; };
+		847C83711A10D35600F913F2 /* PTHomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHomeScreenViewController.m; sourceTree = "<group>"; };
+		847C83731A10D36400F913F2 /* PTScanMembershipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTScanMembershipViewController.h; sourceTree = "<group>"; };
+		847C83741A10D36400F913F2 /* PTScanMembershipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTScanMembershipViewController.m; sourceTree = "<group>"; };
+		847C83761A10D37200F913F2 /* PTSessionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTSessionDetailsViewController.h; sourceTree = "<group>"; };
+		847C83771A10D37200F913F2 /* PTSessionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTSessionDetailsViewController.m; sourceTree = "<group>"; };
+		847C83791A10D38000F913F2 /* PTTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTutorialViewController.h; sourceTree = "<group>"; };
+		847C837A1A10D38000F913F2 /* PTTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTutorialViewController.m; sourceTree = "<group>"; };
+		847C837C1A10D38F00F913F2 /* PTWorkoutDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTWorkoutDetailsViewController.h; sourceTree = "<group>"; };
+		847C837D1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTWorkoutDetailsViewController.m; sourceTree = "<group>"; };
+		847C837F1A10D3F000F913F2 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		847C838D1A10DA4700F913F2 /* PTCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCalendarViewController.h; sourceTree = "<group>"; };
+		847C838E1A10DA4700F913F2 /* PTCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCalendarViewController.m; sourceTree = "<group>"; };
+		847C83901A10DA6500F913F2 /* PTCMHomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCMHomeScreenViewController.h; sourceTree = "<group>"; };
+		847C83911A10DA6500F913F2 /* PTCMHomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCMHomeScreenViewController.m; sourceTree = "<group>"; };
+		847C83931A10DAA500F913F2 /* PTCMSessionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCMSessionDetailsViewController.h; sourceTree = "<group>"; };
+		847C83941A10DAA500F913F2 /* PTCMSessionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCMSessionDetailsViewController.m; sourceTree = "<group>"; };
+		847C83961A10DABF00F913F2 /* PTCMTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCMTutorialViewController.h; sourceTree = "<group>"; };
+		847C83971A10DABF00F913F2 /* PTCMTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCMTutorialViewController.m; sourceTree = "<group>"; };
+		847C83991A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCMWorkoutDetailsViewController.h; sourceTree = "<group>"; };
+		847C839A1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCMWorkoutDetailsViewController.m; sourceTree = "<group>"; };
+		847C839C1A10DAFB00F913F2 /* PTContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTContainerViewController.h; sourceTree = "<group>"; };
+		847C839D1A10DAFB00F913F2 /* PTContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTContainerViewController.m; sourceTree = "<group>"; };
+		847C839F1A10DB1400F913F2 /* PTLogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLogoutViewController.h; sourceTree = "<group>"; };
+		847C83A01A10DB1400F913F2 /* PTLogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLogoutViewController.m; sourceTree = "<group>"; };
+		847C83A21A10DB2C00F913F2 /* PTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMenuViewController.h; sourceTree = "<group>"; };
+		847C83A31A10DB2C00F913F2 /* PTMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMenuViewController.m; sourceTree = "<group>"; };
+		847C83A51A10DB4300F913F2 /* PTNutritionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNutritionDetailsViewController.h; sourceTree = "<group>"; };
+		847C83A61A10DB4300F913F2 /* PTNutritionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNutritionDetailsViewController.m; sourceTree = "<group>"; };
+		847C83A81A10DB6300F913F2 /* PTNutritionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNutritionViewController.h; sourceTree = "<group>"; };
+		847C83A91A10DB6300F913F2 /* PTNutritionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNutritionViewController.m; sourceTree = "<group>"; };
+		847C83AB1A10DB7800F913F2 /* PTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileViewController.h; sourceTree = "<group>"; };
+		847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileViewController.m; sourceTree = "<group>"; };
+		847C83AE1A10DB9100F913F2 /* PTWorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTWorkoutsViewController.h; sourceTree = "<group>"; };
+		847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTWorkoutsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +161,11 @@
 		847C830A1A10BE2500F913F2 /* PTSquared */ = {
 			isa = PBXGroup;
 			children = (
-				847C830F1A10BE2500F913F2 /* AppDelegate.h */,
-				847C83101A10BE2500F913F2 /* AppDelegate.m */,
-				847C83121A10BE2500F913F2 /* ViewController.h */,
-				847C83131A10BE2500F913F2 /* ViewController.m */,
-				847C83151A10BE2500F913F2 /* Main.storyboard */,
-				847C83181A10BE2500F913F2 /* Images.xcassets */,
+				847C83341A10BFB300F913F2 /* Classes */,
+				847C833A1A10BFB300F913F2 /* Resources */,
+				847C83151A10BE2500F913F2 /* Login.storyboard */,
+				847C833B1A10BFD700F913F2 /* TrainerMode.storyboard */,
+				847C833D1A10BFE700F913F2 /* ClientMode.storyboard */,
 				847C831A1A10BE2500F913F2 /* LaunchScreen.xib */,
 				847C830B1A10BE2500F913F2 /* Supporting Files */,
 			);
@@ -96,8 +175,11 @@
 		847C830B1A10BE2500F913F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				847C83311A10BF3300F913F2 /* AppDelegate.h */,
+				847C83321A10BF3300F913F2 /* AppDelegate.m */,
 				847C830C1A10BE2500F913F2 /* Info.plist */,
 				847C830D1A10BE2500F913F2 /* main.m */,
+				847C837F1A10D3F000F913F2 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +199,345 @@
 				847C83261A10BE2500F913F2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		847C83341A10BFB300F913F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				847C83351A10BFB300F913F2 /* Cells */,
+				847C83361A10BFB300F913F2 /* Managers */,
+				847C83371A10BFB300F913F2 /* OtherClasses */,
+				847C83381A10BFB300F913F2 /* ViewControllers */,
+				847C83391A10BFB300F913F2 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		847C83351A10BFB300F913F2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		847C83361A10BFB300F913F2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		847C83371A10BFB300F913F2 /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OtherClasses;
+			sourceTree = "<group>";
+		};
+		847C83381A10BFB300F913F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				847C83801A10D92000F913F2 /* ClientMode */,
+				847C83621A10C98900F913F2 /* TrainerMode */,
+				847C83431A10C3E100F913F2 /* LoginRegistration */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		847C83391A10BFB300F913F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		847C833A1A10BFB300F913F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847C833F1A10C02600F913F2 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		847C83431A10C3E100F913F2 /* LoginRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				847C83441A10C3E100F913F2 /* CalendarAccessVC */,
+				847C83451A10C3E100F913F2 /* ClientLoginVC */,
+				847C83461A10C3E100F913F2 /* ClientRegistrationVC */,
+				847C83471A10C3E100F913F2 /* ClientScreenVC */,
+				847C83481A10C3E100F913F2 /* LoginVC */,
+				847C83491A10C3E100F913F2 /* TrainerLoginVC */,
+				847C834A1A10C3E100F913F2 /* ValidationVC */,
+			);
+			path = LoginRegistration;
+			sourceTree = "<group>";
+		};
+		847C83441A10C3E100F913F2 /* CalendarAccessVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C834B1A10C41300F913F2 /* PTCalendarAccessViewController.h */,
+				847C834C1A10C41300F913F2 /* PTCalendarAccessViewController.m */,
+			);
+			path = CalendarAccessVC;
+			sourceTree = "<group>";
+		};
+		847C83451A10C3E100F913F2 /* ClientLoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C834E1A10C43100F913F2 /* PTClientLoginViewController.h */,
+				847C834F1A10C43100F913F2 /* PTClientLoginViewController.m */,
+			);
+			path = ClientLoginVC;
+			sourceTree = "<group>";
+		};
+		847C83461A10C3E100F913F2 /* ClientRegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83511A10C44000F913F2 /* PTClientRegistrationViewController.h */,
+				847C83521A10C44000F913F2 /* PTClientRegistrationViewController.m */,
+			);
+			path = ClientRegistrationVC;
+			sourceTree = "<group>";
+		};
+		847C83471A10C3E100F913F2 /* ClientScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83541A10C44F00F913F2 /* PTClientScreenViewController.h */,
+				847C83551A10C44F00F913F2 /* PTClientScreenViewController.m */,
+			);
+			path = ClientScreenVC;
+			sourceTree = "<group>";
+		};
+		847C83481A10C3E100F913F2 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83571A10C45900F913F2 /* PTLoginViewController.h */,
+				847C83581A10C45900F913F2 /* PTLoginViewController.m */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		847C83491A10C3E100F913F2 /* TrainerLoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C835A1A10C46700F913F2 /* PTTrainerLoginViewController.h */,
+				847C835B1A10C46700F913F2 /* PTTrainerLoginViewController.m */,
+			);
+			path = TrainerLoginVC;
+			sourceTree = "<group>";
+		};
+		847C834A1A10C3E100F913F2 /* ValidationVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C835D1A10C47100F913F2 /* PTValidationViewController.h */,
+				847C835E1A10C47100F913F2 /* PTValidationViewController.m */,
+			);
+			path = ValidationVC;
+			sourceTree = "<group>";
+		};
+		847C83621A10C98900F913F2 /* TrainerMode */ = {
+			isa = PBXGroup;
+			children = (
+				847C83631A10C98900F913F2 /* AddAttendeeVC */,
+				847C83641A10C98900F913F2 /* AttendeesVC */,
+				847C83651A10C98900F913F2 /* HomeScreenVC */,
+				847C83661A10C98900F913F2 /* ScanMembershipVC */,
+				847C83671A10C98900F913F2 /* SessionDetailsVC */,
+				847C83681A10C98900F913F2 /* TutorialVC */,
+				847C83691A10C98900F913F2 /* WorkoutDetailsVC */,
+			);
+			path = TrainerMode;
+			sourceTree = "<group>";
+		};
+		847C83631A10C98900F913F2 /* AddAttendeeVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C836A1A10D33200F913F2 /* PTAddAttendeeViewController.h */,
+				847C836B1A10D33200F913F2 /* PTAddAttendeeViewController.m */,
+			);
+			path = AddAttendeeVC;
+			sourceTree = "<group>";
+		};
+		847C83641A10C98900F913F2 /* AttendeesVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C836D1A10D34100F913F2 /* PTAttendeesViewController.h */,
+				847C836E1A10D34100F913F2 /* PTAttendeesViewController.m */,
+			);
+			path = AttendeesVC;
+			sourceTree = "<group>";
+		};
+		847C83651A10C98900F913F2 /* HomeScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83701A10D35600F913F2 /* PTHomeScreenViewController.h */,
+				847C83711A10D35600F913F2 /* PTHomeScreenViewController.m */,
+			);
+			path = HomeScreenVC;
+			sourceTree = "<group>";
+		};
+		847C83661A10C98900F913F2 /* ScanMembershipVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83731A10D36400F913F2 /* PTScanMembershipViewController.h */,
+				847C83741A10D36400F913F2 /* PTScanMembershipViewController.m */,
+			);
+			path = ScanMembershipVC;
+			sourceTree = "<group>";
+		};
+		847C83671A10C98900F913F2 /* SessionDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83761A10D37200F913F2 /* PTSessionDetailsViewController.h */,
+				847C83771A10D37200F913F2 /* PTSessionDetailsViewController.m */,
+			);
+			path = SessionDetailsVC;
+			sourceTree = "<group>";
+		};
+		847C83681A10C98900F913F2 /* TutorialVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83791A10D38000F913F2 /* PTTutorialViewController.h */,
+				847C837A1A10D38000F913F2 /* PTTutorialViewController.m */,
+			);
+			path = TutorialVC;
+			sourceTree = "<group>";
+		};
+		847C83691A10C98900F913F2 /* WorkoutDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C837C1A10D38F00F913F2 /* PTWorkoutDetailsViewController.h */,
+				847C837D1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m */,
+			);
+			path = WorkoutDetailsVC;
+			sourceTree = "<group>";
+		};
+		847C83801A10D92000F913F2 /* ClientMode */ = {
+			isa = PBXGroup;
+			children = (
+				847C83811A10D92000F913F2 /* CalendarVC */,
+				847C83821A10D92000F913F2 /* CMHomeScreenVC */,
+				847C83831A10D92000F913F2 /* CMSessionDetailsVC */,
+				847C83841A10D92000F913F2 /* CMTutorialVC */,
+				847C83851A10D92000F913F2 /* CMWorkoutDetailsVC */,
+				847C83861A10D92000F913F2 /* ContainerVC */,
+				847C83871A10D92000F913F2 /* LogoutVC */,
+				847C83881A10D92000F913F2 /* MenuVC */,
+				847C83891A10D92000F913F2 /* NutritionDetailsVC */,
+				847C838A1A10D92000F913F2 /* NutritionVC */,
+				847C838B1A10D92000F913F2 /* ProfileVC */,
+				847C838C1A10D92000F913F2 /* WorkoutsVC */,
+			);
+			path = ClientMode;
+			sourceTree = "<group>";
+		};
+		847C83811A10D92000F913F2 /* CalendarVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C838D1A10DA4700F913F2 /* PTCalendarViewController.h */,
+				847C838E1A10DA4700F913F2 /* PTCalendarViewController.m */,
+			);
+			path = CalendarVC;
+			sourceTree = "<group>";
+		};
+		847C83821A10D92000F913F2 /* CMHomeScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83901A10DA6500F913F2 /* PTCMHomeScreenViewController.h */,
+				847C83911A10DA6500F913F2 /* PTCMHomeScreenViewController.m */,
+			);
+			path = CMHomeScreenVC;
+			sourceTree = "<group>";
+		};
+		847C83831A10D92000F913F2 /* CMSessionDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83931A10DAA500F913F2 /* PTCMSessionDetailsViewController.h */,
+				847C83941A10DAA500F913F2 /* PTCMSessionDetailsViewController.m */,
+			);
+			path = CMSessionDetailsVC;
+			sourceTree = "<group>";
+		};
+		847C83841A10D92000F913F2 /* CMTutorialVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83961A10DABF00F913F2 /* PTCMTutorialViewController.h */,
+				847C83971A10DABF00F913F2 /* PTCMTutorialViewController.m */,
+			);
+			path = CMTutorialVC;
+			sourceTree = "<group>";
+		};
+		847C83851A10D92000F913F2 /* CMWorkoutDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83991A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.h */,
+				847C839A1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m */,
+			);
+			path = CMWorkoutDetailsVC;
+			sourceTree = "<group>";
+		};
+		847C83861A10D92000F913F2 /* ContainerVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C839C1A10DAFB00F913F2 /* PTContainerViewController.h */,
+				847C839D1A10DAFB00F913F2 /* PTContainerViewController.m */,
+			);
+			path = ContainerVC;
+			sourceTree = "<group>";
+		};
+		847C83871A10D92000F913F2 /* LogoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C839F1A10DB1400F913F2 /* PTLogoutViewController.h */,
+				847C83A01A10DB1400F913F2 /* PTLogoutViewController.m */,
+			);
+			path = LogoutVC;
+			sourceTree = "<group>";
+		};
+		847C83881A10D92000F913F2 /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83A21A10DB2C00F913F2 /* PTMenuViewController.h */,
+				847C83A31A10DB2C00F913F2 /* PTMenuViewController.m */,
+			);
+			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		847C83891A10D92000F913F2 /* NutritionDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83A51A10DB4300F913F2 /* PTNutritionDetailsViewController.h */,
+				847C83A61A10DB4300F913F2 /* PTNutritionDetailsViewController.m */,
+			);
+			path = NutritionDetailsVC;
+			sourceTree = "<group>";
+		};
+		847C838A1A10D92000F913F2 /* NutritionVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83A81A10DB6300F913F2 /* PTNutritionViewController.h */,
+				847C83A91A10DB6300F913F2 /* PTNutritionViewController.m */,
+			);
+			path = NutritionVC;
+			sourceTree = "<group>";
+		};
+		847C838B1A10D92000F913F2 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83AB1A10DB7800F913F2 /* PTProfileViewController.h */,
+				847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		847C838C1A10D92000F913F2 /* WorkoutsVC */ = {
+			isa = PBXGroup;
+			children = (
+				847C83AE1A10DB9100F913F2 /* PTWorkoutsViewController.h */,
+				847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */,
+			);
+			path = WorkoutsVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +584,7 @@
 		847C83001A10BE2500F913F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PT;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Thinkmobiles;
 				TargetAttributes = {
@@ -199,9 +621,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847C83171A10BE2500F913F2 /* Main.storyboard in Resources */,
+				847C83171A10BE2500F913F2 /* Login.storyboard in Resources */,
+				847C83401A10C02600F913F2 /* Images.xcassets in Resources */,
+				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
-				847C83191A10BE2500F913F2 /* Images.xcassets in Resources */,
+				847C833E1A10BFE700F913F2 /* ClientMode.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +643,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847C83141A10BE2500F913F2 /* ViewController.m in Sources */,
-				847C83111A10BE2500F913F2 /* AppDelegate.m in Sources */,
+				847C83591A10C45900F913F2 /* PTLoginViewController.m in Sources */,
+				847C83A11A10DB1400F913F2 /* PTLogoutViewController.m in Sources */,
+				847C837B1A10D38000F913F2 /* PTTutorialViewController.m in Sources */,
+				847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */,
+				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
+				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,
+				847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */,
 				847C830E1A10BE2500F913F2 /* main.m in Sources */,
+				847C836F1A10D34100F913F2 /* PTAttendeesViewController.m in Sources */,
+				847C839E1A10DAFB00F913F2 /* PTContainerViewController.m in Sources */,
+				847C83A71A10DB4300F913F2 /* PTNutritionDetailsViewController.m in Sources */,
+				847C83951A10DAA500F913F2 /* PTCMSessionDetailsViewController.m in Sources */,
+				847C83531A10C44000F913F2 /* PTClientRegistrationViewController.m in Sources */,
+				847C83721A10D35600F913F2 /* PTHomeScreenViewController.m in Sources */,
+				847C83B01A10DB9100F913F2 /* PTWorkoutsViewController.m in Sources */,
+				847C836C1A10D33200F913F2 /* PTAddAttendeeViewController.m in Sources */,
+				847C83501A10C43100F913F2 /* PTClientLoginViewController.m in Sources */,
+				847C83751A10D36400F913F2 /* PTScanMembershipViewController.m in Sources */,
+				847C83561A10C44F00F913F2 /* PTClientScreenViewController.m in Sources */,
+				847C83A41A10DB2C00F913F2 /* PTMenuViewController.m in Sources */,
+				847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */,
+				847C83921A10DA6500F913F2 /* PTCMHomeScreenViewController.m in Sources */,
+				847C83781A10D37200F913F2 /* PTSessionDetailsViewController.m in Sources */,
+				847C837E1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m in Sources */,
+				847C839B1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m in Sources */,
+				847C835F1A10C47100F913F2 /* PTValidationViewController.m in Sources */,
+				847C838F1A10DA4700F913F2 /* PTCalendarViewController.m in Sources */,
+				847C83AD1A10DB7800F913F2 /* PTProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,12 +693,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		847C83151A10BE2500F913F2 /* Main.storyboard */ = {
+		847C83151A10BE2500F913F2 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				847C83161A10BE2500F913F2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		847C831A1A10BE2500F913F2 /* LaunchScreen.xib */ = {
@@ -297,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -343,7 +792,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_PREFIX_HEADER = PTSquared/Prefix.pch;
 				INFOPLIST_FILE = PTSquared/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +805,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_PREFIX_HEADER = PTSquared/Prefix.pch;
 				INFOPLIST_FILE = PTSquared/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

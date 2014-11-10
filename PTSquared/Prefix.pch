@@ -1,0 +1,14 @@
+//
+//  Prefix.pch
+//  PTSquared
+//
+//  Created by Stas Volskyi on 10.11.14.
+//  Copyright (c) 2014 Thinkmobiles. All rights reserved.
+//
+
+#ifndef PTSquared_Prefix_pch
+#define PTSquared_Prefix_pch
+
+#import <UIKit/UIKit.h>
+
+#endif
