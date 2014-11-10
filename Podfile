@@ -5,6 +5,7 @@ target "PTSquared" do
 pod 'Facebook-iOS-SDK'
 pod 'RestKit'
 pod 'GoogleAnalytics-iOS-SDK'
+pod 'Google-Maps-iOS-SDK'
 
 end
 

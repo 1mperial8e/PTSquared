@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3MP-qh-VKv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3MP-qh-VKv">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Tutorial View Controller-->
@@ -16,9 +15,94 @@
                     <view key="view" contentMode="scaleToFill" id="0ZH-Hz-GvE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D2N-BD-AJp" userLabel="Tutorial CollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cTc-ZG-PP2">
+                                    <size key="itemSize" width="320" height="568"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TutorialCell" id="P5X-ed-vXy" customClass="PTTutorialCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHP-e8-E28" userLabel="Tutorial ImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-AD-1xw">
+                                                    <rect key="frame" x="62" y="116" width="34" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="SKIP">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="closeTutorialButton:" destination="P5X-ed-vXy" eventType="touchUpInside" id="cJ2-Lf-05j"/>
+                                                    </connections>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cok-oo-pMv">
+                                                    <rect key="frame" x="254" y="488" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="GO">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="closeTutorialButton:" destination="P5X-ed-vXy" eventType="touchUpInside" id="3Xg-Hb-2tf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iHP-e8-E28" secondAttribute="trailing" id="4SX-8f-ukz"/>
+                                            <constraint firstItem="iHP-e8-E28" firstAttribute="top" secondItem="P5X-ed-vXy" secondAttribute="top" id="995-0t-9tf"/>
+                                            <constraint firstAttribute="bottom" secondItem="iHP-e8-E28" secondAttribute="bottom" id="I3u-ig-K9g"/>
+                                            <constraint firstItem="iHP-e8-E28" firstAttribute="leading" secondItem="P5X-ed-vXy" secondAttribute="leading" id="KbJ-fH-6pD"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="endTutorialButton" destination="cok-oo-pMv" id="UZp-sp-IG6"/>
+                                            <outlet property="skipButton" destination="q0h-AD-1xw" id="3Ng-2P-zBd"/>
+                                            <outlet property="tutorialImageView" destination="iHP-e8-E28" id="Mje-WZ-ree"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="QP3-kO-NgM" id="Hwz-1h-zC8"/>
+                                    <outlet property="delegate" destination="QP3-kO-NgM" id="K9z-Ur-4AW"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="f4A-hM-RJ1" userLabel="Tutorial Page Control">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="01c-2r-5Oc"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F0P-tZ-kxb" firstAttribute="top" secondItem="f4A-hM-RJ1" secondAttribute="bottom" id="2AL-CF-jfM"/>
+                            <constraint firstAttribute="trailing" secondItem="f4A-hM-RJ1" secondAttribute="trailing" id="KVQ-fX-R5B"/>
+                            <constraint firstItem="D2N-BD-AJp" firstAttribute="leading" secondItem="0ZH-Hz-GvE" secondAttribute="leading" id="Mpf-Qg-4WX"/>
+                            <constraint firstAttribute="trailing" secondItem="D2N-BD-AJp" secondAttribute="trailing" id="Q3L-Du-RU8"/>
+                            <constraint firstItem="F0P-tZ-kxb" firstAttribute="top" secondItem="D2N-BD-AJp" secondAttribute="bottom" id="QaL-Ej-XO3"/>
+                            <constraint firstItem="f4A-hM-RJ1" firstAttribute="leading" secondItem="0ZH-Hz-GvE" secondAttribute="leading" id="chG-St-svS"/>
+                            <constraint firstItem="D2N-BD-AJp" firstAttribute="top" secondItem="0ZH-Hz-GvE" secondAttribute="top" id="hMo-RH-18S"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tutorialCollectionView" destination="D2N-BD-AJp" id="kyG-fh-qIl"/>
+                        <outlet property="tutorialPageControl" destination="f4A-hM-RJ1" id="TvZ-ra-o03"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkn-Fs-Vdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,4 +243,9 @@
             <point key="canvasLocation" x="157" y="447"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
