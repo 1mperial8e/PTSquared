@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "194A680B6750444AB0D4435C"
+               BlueprintIdentifier = "B32D779596206AE59EC6A008"
                BuildableName = "libPods-PTSquared-RestKit.a"
                BlueprintName = "Pods-PTSquared-RestKit"
                ReferencedContainer = "container:Pods.xcodeproj">
