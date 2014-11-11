@@ -8,21 +8,17 @@
 
 #import "PTTutorialViewController.h"
 #import "PTTutorialCell.h"
+#import "PTContainerViewController.h"
 
 static NSString *const PTTCellIdentifier = @"TutorialCell";
 static NSInteger const PTTOffcet = 50;
 
-@interface PTTutorialViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface PTTutorialViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, PTTutorialCell>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *tutorialCollectionView;
 @property (weak, nonatomic) IBOutlet UIPageControl *tutorialPageControl;
 
 @property (strong, nonatomic) NSMutableArray *tutorialImages;
-
-- (void)configureCellSize:(PTTutorialCell*)cell;
-- (void)configureDataSource;
-- (void)configurePageControl;
-- (void)addImagesToDataSource;
 
 @end
 
@@ -38,6 +34,15 @@ static NSInteger const PTTOffcet = 50;
     [self configurePageControl];
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+#ifdef __IPHONE_8_0
+    self.tutorialCollectionView.layoutMargins = UIEdgeInsetsZero;
+#endif
+    self.tutorialCollectionView.contentInset = UIEdgeInsetsZero;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -51,8 +56,13 @@ static NSInteger const PTTOffcet = 50;
     if (!cell) {
         cell = [[PTTutorialCell alloc] init];
     }
-    [self configureCellSize:(PTTutorialCell*)cell];
+    if (indexPath.row == 0){
+        cell.skipButton.hidden = NO;
+    }
+    cell.bounds = self.tutorialCollectionView.frame;
+    cell.tutorialImageView.frame = cell.bounds;
     cell.tutorialImageView.image = self.tutorialImages[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -64,18 +74,20 @@ static NSInteger const PTTOffcet = 50;
         PTTutorialCell *cell = (PTTutorialCell *)[self.tutorialCollectionView cellForItemAtIndexPath:indexPath];
         if (ABS(cell.frame.origin.x - self.tutorialCollectionView.contentOffset.x) <= PTTOffcet) {
             self.tutorialPageControl.currentPage = indexPath.row;
-            cell.skipButton.hidden = !indexPath.row;
-            cell.endTutorialButton.hidden = !(indexPath.row == self.tutorialImages.count - 1);
+            cell.skipButton.hidden = indexPath.row == 0 ? NO : YES;
+            cell.endTutorialButton.hidden = indexPath.row == self.tutorialImages.count - 1 ? NO : YES;
         }
     }
 }
 
-#pragma mark - Private
+#pragma mark - PTTutorialCell
 
-- (void)configureCellSize:(PTTutorialCell*)cell
+- (void)endTutorialConfirmed
 {
-    cell.bounds = self.tutorialCollectionView.bounds;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Private
 
 - (void)configureDataSource
 {
@@ -96,7 +108,9 @@ static NSInteger const PTTOffcet = 50;
 
 - (void)addImagesToDataSource
 {
-    //to add images
+    for (int i = 0; i < 4; i++) {
+        [self.tutorialImages addObject:[UIImage imageNamed:@"11"]];
+    }
 }
 
 @end

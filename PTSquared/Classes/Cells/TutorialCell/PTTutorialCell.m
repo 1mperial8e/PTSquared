@@ -24,7 +24,7 @@
 
 - (IBAction)closeTutorialButton:(id)sender
 {
-    
+    [self.delegate endTutorialConfirmed];
 }
 
 @end

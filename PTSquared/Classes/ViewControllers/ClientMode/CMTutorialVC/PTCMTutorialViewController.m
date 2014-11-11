@@ -8,11 +8,12 @@
 
 #import "PTCMTutorialViewController.h"
 #import "PTTutorialCell.h"
+#import "PTContainerViewController.h"
 
 static NSString *const PTTCellIdentifier = @"TutorialCell";
 static NSInteger const PTTOffcet = 50;
 
-@interface PTCMTutorialViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface PTCMTutorialViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, PTTutorialCell>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *tutorialCollectionView;
 @property (weak, nonatomic) IBOutlet UIPageControl *tutorialPageControl;
@@ -61,6 +62,7 @@ static NSInteger const PTTOffcet = 50;
     cell.bounds = self.tutorialCollectionView.frame;
     cell.tutorialImageView.frame = cell.bounds;
     cell.tutorialImageView.image = self.tutorialImages[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -76,6 +78,13 @@ static NSInteger const PTTOffcet = 50;
             cell.endTutorialButton.hidden = indexPath.row == self.tutorialImages.count - 1 ? NO : YES;
         }
     }
+}
+
+#pragma mark - PTTutorialCell
+
+- (void)endTutorialConfirmed
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Private

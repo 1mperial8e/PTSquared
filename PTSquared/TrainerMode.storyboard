@@ -7,7 +7,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="sX5-sJ-fy9">
             <objects>
-                <viewController id="QP3-kO-NgM" customClass="PTTutorialViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QP3-kO-NgM" customClass="PTTutorialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dlN-UT-P6G"/>
                         <viewControllerLayoutGuide type="bottom" id="F0P-tZ-kxb"/>
