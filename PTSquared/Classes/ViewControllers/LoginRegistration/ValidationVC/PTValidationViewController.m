@@ -7,6 +7,8 @@
 //
 
 #import "PTValidationViewController.h"
+#import "PTProfileManager.h"
+#import "PTCalendarAccessViewController.h"
 
 @interface PTValidationViewController () <UITextFieldDelegate>
 
@@ -35,6 +37,13 @@
     
 }
 
+- (IBAction)submitButtonPress:(id)sender
+{
+    [self configureProfileManager];
+    PTCalendarAccessViewController *viewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"allowCalendar"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 #pragma mark - UITextFieldDelegate
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
@@ -43,5 +52,11 @@
     return YES;
 }
 
+#pragma mark - Private
+
+- (void)configureProfileManager
+{
+    [[PTProfileManager sharedManager] setupWithProfile:CLIENT];
+}
 
 @end

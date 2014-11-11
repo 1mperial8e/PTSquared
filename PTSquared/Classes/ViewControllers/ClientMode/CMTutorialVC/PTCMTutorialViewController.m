@@ -33,9 +33,18 @@ static NSInteger const PTTOffcet = 50;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     [self configureDataSource];
     [self configurePageControl];
+    
+    self.tutorialCollectionView.contentInset = UIEdgeInsetsZero;
+
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.tutorialCollectionView.contentInset = UIEdgeInsetsZero;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -52,6 +61,10 @@ static NSInteger const PTTOffcet = 50;
         cell = [[PTTutorialCell alloc] init];
     }
     [self configureCellSize:(PTTutorialCell*)cell];
+    if (indexPath.row) {
+        cell.skipButton.hidden = YES;
+    }
+    cell.tutorialImageView.frame = cell.bounds;
     cell.tutorialImageView.image = self.tutorialImages[indexPath.row];
     return cell;
 }
@@ -64,8 +77,8 @@ static NSInteger const PTTOffcet = 50;
         PTTutorialCell *cell = (PTTutorialCell *)[self.tutorialCollectionView cellForItemAtIndexPath:indexPath];
         if (ABS(cell.frame.origin.x - self.tutorialCollectionView.contentOffset.x) <= PTTOffcet) {
             self.tutorialPageControl.currentPage = indexPath.row;
-            cell.skipButton.hidden = !indexPath.row;
-            cell.endTutorialButton.hidden = !(indexPath.row == self.tutorialImages.count - 1);
+            cell.skipButton.hidden = indexPath.row == 0 ? NO : YES;
+            cell.endTutorialButton.hidden = indexPath.row == self.tutorialImages.count - 1 ? NO : YES;
         }
     }
 }
@@ -96,7 +109,9 @@ static NSInteger const PTTOffcet = 50;
 
 - (void)addImagesToDataSource
 {
-    //to add images
+    for (int i = 0; i < 4; i++) {
+        [self.tutorialImages addObject:[UIImage imageWithColor:[UIColor colorWithRed:10*i/255.0 green:10+20*i/255.0 blue:70/255.0 alpha:1.0f]]];
+    }
 }
 
 @end

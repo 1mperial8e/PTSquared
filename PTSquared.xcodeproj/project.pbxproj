@@ -46,7 +46,7 @@
 		ED6015F61A1116F80043120A /* PTTutorialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F51A1116F80043120A /* PTTutorialCell.m */; };
 		ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */; };
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
-		EDD6B1EC1A11FFC000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1EB1A11FFC000DBEBBD /* 11.png */; };
+		EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +137,8 @@
 		ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageAddition.m"; sourceTree = "<group>"; };
 		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
 		EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorAddition.m"; sourceTree = "<group>"; };
-		EDD6B1EB1A11FFC000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileManager.h; sourceTree = "<group>"; };
+		EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +272,6 @@
 		847C833A1A10BFB300F913F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EDD6B1EB1A11FFC000DBEBBD /* 11.png */,
 				847C833F1A10C02600F913F2 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -561,6 +561,7 @@
 		ED6015EC1A1101C00043120A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6B1ED1A12007E00DBEBBD /* ProfileManager */,
 				ED6015EF1A1101F90043120A /* GAManager */,
 			);
 			path = Managers;
@@ -626,6 +627,15 @@
 				EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */,
 			);
 			path = "UIColor+ColorAddition";
+			sourceTree = "<group>";
+		};
+		EDD6B1ED1A12007E00DBEBBD /* ProfileManager */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */,
+				EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */,
+			);
+			path = ProfileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,7 +722,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				847C83171A10BE2500F913F2 /* Login.storyboard in Resources */,
-				EDD6B1EC1A11FFC000DBEBBD /* 11.png in Resources */,
 				847C83401A10C02600F913F2 /* Images.xcassets in Resources */,
 				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
@@ -773,6 +782,7 @@
 				847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */,
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
 				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
+				EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */,
 				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,
 				ED6015F21A1101F90043120A /* PTGAManager.m in Sources */,
 				847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */,

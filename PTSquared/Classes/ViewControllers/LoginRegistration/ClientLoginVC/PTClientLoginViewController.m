@@ -7,6 +7,8 @@
 //
 
 #import "PTClientLoginViewController.h"
+#import "PTProfileManager.h"
+#import "PTCalendarAccessViewController.h"
 
 @interface PTClientLoginViewController () <UITextFieldDelegate>
 
@@ -36,14 +38,33 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)signInButtonPress:(id)sender
+{
+    [self configureProfileManager];
+    PTCalendarAccessViewController *viewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:@"allowCalendar"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)faceBookLoginButtonPress:(id)sender
+{
+    [self configureProfileManager];
+    //TODO
+}
+
 #pragma mark - UITextFieldDelegate
 
--(BOOL) textFieldShouldReturn:(UITextField *)textField
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
 
+#pragma mark - Private
+
+- (void)configureProfileManager
+{
+    [[PTProfileManager sharedManager] setupWithProfile:CLIENT];
+}
 
 
 @end

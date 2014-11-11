@@ -10,13 +10,21 @@
 
 @implementation PTTutorialCell
 
-#pragma mark - IBActions
+#pragma mark - LifeCycle
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    self.tutorialImageView.image = nil;
+    self.skipButton.hidden = YES;
+    self.endTutorialButton.hidden = YES;
+}
+
+#pragma mark - IBActions
 
 - (IBAction)closeTutorialButton:(id)sender
 {
     
 }
-
 
 @end

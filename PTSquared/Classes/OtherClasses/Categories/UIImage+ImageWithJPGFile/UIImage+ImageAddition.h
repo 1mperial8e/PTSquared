@@ -10,5 +10,6 @@
 
 + (UIImage *)imageNamedFile:(NSString *)imageNameInLocalBundle;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
++ (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

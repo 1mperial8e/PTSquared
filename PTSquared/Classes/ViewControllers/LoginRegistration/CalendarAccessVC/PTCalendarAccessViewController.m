@@ -7,6 +7,8 @@
 //
 
 #import "PTCalendarAccessViewController.h"
+#import "PTProfileManager.h"
+#import "PTHomeScreenViewController.h"
 
 @interface PTCalendarAccessViewController ()
 
@@ -27,12 +29,38 @@
 
 - (IBAction)allowCalendarButtonPress:(id)sender
 {
-    
+    if ([self getCalendarInformation]) {
+        [self finishLoginProcess];
+    }
 }
 
 - (IBAction)cancellButtonPress:(id)sender
 {
-    
+    [self finishLoginProcess];
+}
+
+#pragma mark - Private
+
+- (BOOL)getCalendarInformation
+{
+    //TODO
+    return YES;
+}
+
+- (void)finishLoginProcess
+{
+    UIViewController *controller;
+    switch ([PTProfileManager sharedManager].profileType) {
+        case PERSONAL_TRAINER: {
+            controller = [[UIStoryboard storyboardWithName:@"TrainerMode" bundle:nil] instantiateInitialViewController];
+            break;
+        }
+        case CLIENT: {
+            controller = [[UIStoryboard storyboardWithName:@"ClientMode" bundle:nil] instantiateInitialViewController];
+            break;
+        }
+    }
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

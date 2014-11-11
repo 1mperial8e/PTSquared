@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ued-bj-rgk">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Tutorial View Controller-->
         <scene sceneID="6im-C9-a80">
             <objects>
-                <viewController id="9DZ-HP-N0F" customClass="PTCMTutorialViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9DZ-HP-N0F" customClass="PTCMTutorialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SHQ-xO-eNh"/>
                         <viewControllerLayoutGuide type="bottom" id="Mia-k9-ayY"/>
@@ -34,10 +33,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q4b-sa-TnV" userLabel="Tutorial ImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4b-sa-TnV" userLabel="Tutorial ImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 </imageView>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D5-zO-cVF" userLabel="Skip - UIButton">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D5-zO-cVF" userLabel="Skip - UIButton">
                                                     <rect key="frame" x="71" y="106" width="46" height="30"/>
                                                     <state key="normal" title="SKIP">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,12 +54,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Q4b-sa-TnV" secondAttribute="trailing" id="GPo-Yg-5hJ"/>
-                                            <constraint firstItem="Q4b-sa-TnV" firstAttribute="leading" secondItem="PBx-Nl-lwt" secondAttribute="leading" id="ljr-K9-DTS"/>
-                                            <constraint firstItem="Q4b-sa-TnV" firstAttribute="top" secondItem="PBx-Nl-lwt" secondAttribute="top" id="qnd-3k-oed"/>
-                                            <constraint firstAttribute="bottom" secondItem="Q4b-sa-TnV" secondAttribute="bottom" id="vey-Sr-7AT"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="endTutorialButton" destination="KPX-9V-BiW" id="Zb3-3x-a6G"/>
                                             <outlet property="skipButton" destination="8D5-zO-cVF" id="Aiw-hD-6bN"/>
@@ -112,7 +105,7 @@
                     <view key="view" contentMode="scaleToFill" id="UcY-5B-FAG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.05825159672" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="rDx-JO-V95"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -158,22 +151,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVk-ST-6iI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="409" y="116"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sC2-MZ-LIT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKW-oK-RHd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E26-g7-oEC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6X0-Uh-1j0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="409" y="887"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="BMd-Io-hyF">

@@ -70,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9WD-dn-olT" kind="push" id="4mC-uI-z6I"/>
+                                    <action selector="signInButtonPress:" destination="NRS-tD-Ven" eventType="touchUpInside" id="oeG-T9-ziZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNe-Ca-JtA" userLabel="Email - TextField">
@@ -204,6 +204,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonPress:" destination="jxW-YU-Zy4" eventType="touchUpInside" id="1bQ-hM-qqe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oO-GM-q3F" userLabel="Back - UIButton">
                                 <rect key="frame" x="20" y="20" width="86" height="30"/>
@@ -301,7 +304,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9WD-dn-olT" kind="push" id="EEC-5U-AbS"/>
+                                    <action selector="submitButtonPress:" destination="ho7-1C-OFB" eventType="touchUpInside" id="T8I-di-MGd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blt-2F-hk8" userLabel="Back - UIButton">
@@ -371,7 +374,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9WD-dn-olT" kind="push" id="Zhz-Po-ETa"/>
+                                    <action selector="signInButtonPress:" destination="Wqp-pZ-x2x" eventType="touchUpInside" id="84c-mz-02W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-k9-fDQ">
@@ -380,7 +383,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9WD-dn-olT" kind="push" id="BvU-qB-dmY"/>
+                                    <action selector="faceBookLoginButtonPress:" destination="Wqp-pZ-x2x" eventType="touchUpInside" id="lSB-nf-bRa"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-M2-oyf" userLabel="Logo - UIImage">
@@ -444,7 +447,7 @@
         <!--Calendar Access View Controller-->
         <scene sceneID="Ngu-pt-lzm">
             <objects>
-                <viewController id="9WD-dn-olT" customClass="PTCalendarAccessViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allowCalendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9WD-dn-olT" customClass="PTCalendarAccessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ecf-ky-UHi"/>
                         <viewControllerLayoutGuide type="bottom" id="ek4-pf-XnK"/>
@@ -524,7 +527,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="4mC-uI-z6I"/>
-    </inferredMetricsTieBreakers>
 </document>
