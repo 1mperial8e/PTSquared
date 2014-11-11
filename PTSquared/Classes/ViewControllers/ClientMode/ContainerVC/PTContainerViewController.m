@@ -29,7 +29,7 @@ static NSString *const CMTutorialShow = @"CMTutorialShow";
 
 - (void)showTutorial
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:CMTutorialShow]) {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:CMTutorialShow]) {
         PTCMTutorialViewController *tutorialController = [[UIStoryboard storyboardWithName:@"ClientMode" bundle:nil] instantiateViewControllerWithIdentifier:@"tutorial"];
         [self presentViewController:tutorialController animated:NO completion:^ {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:CMTutorialShow];

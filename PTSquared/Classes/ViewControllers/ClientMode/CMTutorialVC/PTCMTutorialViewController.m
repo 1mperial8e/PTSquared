@@ -19,11 +19,6 @@ static NSInteger const PTTOffcet = 50;
 
 @property (strong, nonatomic) NSMutableArray *tutorialImages;
 
-- (void)configureCellSize:(PTTutorialCell*)cell;
-- (void)configureDataSource;
-- (void)configurePageControl;
-- (void)addImagesToDataSource;
-
 @end
 
 @implementation PTCMTutorialViewController
@@ -36,14 +31,14 @@ static NSInteger const PTTOffcet = 50;
 
     [self configureDataSource];
     [self configurePageControl];
-    
-    self.tutorialCollectionView.contentInset = UIEdgeInsetsZero;
-
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+#ifdef __IPHONE_8_0
+    self.tutorialCollectionView.layoutMargins = UIEdgeInsetsZero;
+#endif
     self.tutorialCollectionView.contentInset = UIEdgeInsetsZero;
 }
 
@@ -60,10 +55,10 @@ static NSInteger const PTTOffcet = 50;
     if (!cell) {
         cell = [[PTTutorialCell alloc] init];
     }
-    [self configureCellSize:(PTTutorialCell*)cell];
-    if (indexPath.row) {
-        cell.skipButton.hidden = YES;
+    if (indexPath.row == 0){
+        cell.skipButton.hidden = NO;
     }
+    cell.bounds = self.tutorialCollectionView.frame;
     cell.tutorialImageView.frame = cell.bounds;
     cell.tutorialImageView.image = self.tutorialImages[indexPath.row];
     return cell;
@@ -85,11 +80,6 @@ static NSInteger const PTTOffcet = 50;
 
 #pragma mark - Private
 
-- (void)configureCellSize:(PTTutorialCell*)cell
-{
-    cell.bounds = self.tutorialCollectionView.bounds;
-}
-
 - (void)configureDataSource
 {
     if (!self.tutorialImages) {
@@ -110,7 +100,7 @@ static NSInteger const PTTOffcet = 50;
 - (void)addImagesToDataSource
 {
     for (int i = 0; i < 4; i++) {
-        [self.tutorialImages addObject:[UIImage imageWithColor:[UIColor colorWithRed:10*i/255.0 green:10+20*i/255.0 blue:70/255.0 alpha:1.0f]]];
+        [self.tutorialImages addObject:[UIImage imageNamed:@"11"]];
     }
 }
 
