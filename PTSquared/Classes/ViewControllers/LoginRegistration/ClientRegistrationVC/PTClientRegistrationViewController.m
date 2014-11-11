@@ -8,7 +8,12 @@
 
 #import "PTClientRegistrationViewController.h"
 
-@interface PTClientRegistrationViewController ()
+@interface PTClientRegistrationViewController () <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPassTextField;
+@property (weak, nonatomic) IBOutlet UITextField *validationCodeTextField;
 
 @end
 
@@ -17,6 +22,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)faceBookLoginButtonPress:(id)sender
+{
+    
+}
+
+- (IBAction)backButtonPress:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

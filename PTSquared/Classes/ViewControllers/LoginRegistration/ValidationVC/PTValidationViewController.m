@@ -8,15 +8,40 @@
 
 #import "PTValidationViewController.h"
 
-@interface PTValidationViewController ()
+@interface PTValidationViewController () <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *validationCodeTextField;
 
 @end
 
 @implementation PTValidationViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
+
+#pragma mark - IBActions
+
+- (IBAction)backButtonPress:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)cancelButtonPress:(id)sender
+{
+    
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end

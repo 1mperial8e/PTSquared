@@ -14,9 +14,19 @@
 
 @implementation PTLoginViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureNavigationController];
+}
+
+#pragma mark - Private
+
+- (void)configureNavigationController
+{
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 @end

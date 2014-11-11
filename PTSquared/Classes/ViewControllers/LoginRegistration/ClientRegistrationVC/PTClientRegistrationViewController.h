@@ -8,4 +8,7 @@
 
 @interface PTClientRegistrationViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoUIImageView;
+@property (strong, nonatomic) IBOutlet UIView *contentViewUIView;
+
 @end

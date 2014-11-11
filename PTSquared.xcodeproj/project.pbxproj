@@ -44,7 +44,9 @@
 		972165EC7EE44F08813BE722 /* libPods-PTSquared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F1F2D3EE04A6087CB117B /* libPods-PTSquared.a */; };
 		ED6015F21A1101F90043120A /* PTGAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F11A1101F90043120A /* PTGAManager.m */; };
 		ED6015F61A1116F80043120A /* PTTutorialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F51A1116F80043120A /* PTTutorialCell.m */; };
-		ED6015FB1A1119BB0043120A /* UIImage+ImageWithJPGFile.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015FA1A1119BB0043120A /* UIImage+ImageWithJPGFile.m */; };
+		ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */; };
+		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
+		EDD6B1EC1A11FFC000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1EB1A11FFC000DBEBBD /* 11.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +133,11 @@
 		ED6015F11A1101F90043120A /* PTGAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGAManager.m; sourceTree = "<group>"; };
 		ED6015F41A1116F80043120A /* PTTutorialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTutorialCell.h; sourceTree = "<group>"; };
 		ED6015F51A1116F80043120A /* PTTutorialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTutorialCell.m; sourceTree = "<group>"; };
-		ED6015F91A1119BB0043120A /* UIImage+ImageWithJPGFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithJPGFile.h"; sourceTree = "<group>"; };
-		ED6015FA1A1119BB0043120A /* UIImage+ImageWithJPGFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithJPGFile.m"; sourceTree = "<group>"; };
+		ED6015F91A1119BB0043120A /* UIImage+ImageAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageAddition.h"; sourceTree = "<group>"; };
+		ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageAddition.m"; sourceTree = "<group>"; };
+		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
+		EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorAddition.m"; sourceTree = "<group>"; };
+		EDD6B1EB1A11FFC000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +271,7 @@
 		847C833A1A10BFB300F913F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6B1EB1A11FFC000DBEBBD /* 11.png */,
 				847C833F1A10C02600F913F2 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -597,18 +603,29 @@
 		ED6015F71A1119AE0043120A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				ED6015F81A1119BB0043120A /* UIImage+ImageWithJPGFile */,
+				EDD6B1E61A11ECBA00DBEBBD /* UIColor+ColorAddition */,
+				ED6015F81A1119BB0043120A /* UIImage+ImageAddition */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		ED6015F81A1119BB0043120A /* UIImage+ImageWithJPGFile */ = {
+		ED6015F81A1119BB0043120A /* UIImage+ImageAddition */ = {
 			isa = PBXGroup;
 			children = (
-				ED6015F91A1119BB0043120A /* UIImage+ImageWithJPGFile.h */,
-				ED6015FA1A1119BB0043120A /* UIImage+ImageWithJPGFile.m */,
+				ED6015F91A1119BB0043120A /* UIImage+ImageAddition.h */,
+				ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */,
 			);
+			name = "UIImage+ImageAddition";
 			path = "UIImage+ImageWithJPGFile";
+			sourceTree = "<group>";
+		};
+		EDD6B1E61A11ECBA00DBEBBD /* UIColor+ColorAddition */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */,
+				EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */,
+			);
+			path = "UIColor+ColorAddition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847C83171A10BE2500F913F2 /* Login.storyboard in Resources */,
+				EDD6B1EC1A11FFC000DBEBBD /* 11.png in Resources */,
 				847C83401A10C02600F913F2 /* Images.xcassets in Resources */,
 				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
@@ -754,6 +772,7 @@
 				847C837B1A10D38000F913F2 /* PTTutorialViewController.m in Sources */,
 				847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */,
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
+				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
 				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,
 				ED6015F21A1101F90043120A /* PTGAManager.m in Sources */,
 				847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */,
@@ -763,7 +782,7 @@
 				847C839E1A10DAFB00F913F2 /* PTContainerViewController.m in Sources */,
 				847C83A71A10DB4300F913F2 /* PTNutritionDetailsViewController.m in Sources */,
 				847C83951A10DAA500F913F2 /* PTCMSessionDetailsViewController.m in Sources */,
-				ED6015FB1A1119BB0043120A /* UIImage+ImageWithJPGFile.m in Sources */,
+				ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */,
 				847C83531A10C44000F913F2 /* PTClientRegistrationViewController.m in Sources */,
 				847C83721A10D35600F913F2 /* PTHomeScreenViewController.m in Sources */,
 				847C83B01A10DB9100F913F2 /* PTWorkoutsViewController.m in Sources */,

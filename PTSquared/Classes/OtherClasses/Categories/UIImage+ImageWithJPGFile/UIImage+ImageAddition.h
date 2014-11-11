@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-@interface UIImage (ImageWithJPGFile)
+@interface UIImage (ImageAddition)
 
 + (UIImage *)imageNamedFile:(NSString *)imageNameInLocalBundle;
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;

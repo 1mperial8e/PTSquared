@@ -14,9 +14,19 @@
 
 @implementation PTClientScreenViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
+
+#pragma mark - IBActions
+
+- (IBAction)backButtonPress:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

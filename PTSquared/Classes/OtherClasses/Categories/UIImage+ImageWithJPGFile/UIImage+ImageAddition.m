@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-#import "UIImage+ImageWithJPGFile.h"
+#import "UIImage+ImageAddition.h"
 
-@implementation UIImage (ImageWithJPGFile)
+@implementation UIImage (ImageAddition)
 
 + (UIImage *)imageNamedFile:(NSString *)imageNameInLocalBundle
 {
