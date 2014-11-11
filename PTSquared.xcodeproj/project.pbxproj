@@ -50,6 +50,7 @@
 		EDD6B1F21A12227000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F11A12227000DBEBBD /* 11.png */; };
 		EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */; };
 		EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F71A1250C100DBEBBD /* menu.png */; };
+		EDD6B1FC1A1277E000DBEBBD /* PTMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		EDD6B1F41A124DD800DBEBBD /* PTClientNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientNavController.h; sourceTree = "<group>"; };
 		EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientNavController.m; sourceTree = "<group>"; };
 		EDD6B1F71A1250C100DBEBBD /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		EDD6B1FA1A1277E000DBEBBD /* PTMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMenuTableViewCell.h; sourceTree = "<group>"; };
+		EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMenuTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +583,7 @@
 		ED6015ED1A1101E20043120A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6B1F91A1277B500DBEBBD /* MenuCell */,
 				ED6015F31A1116DC0043120A /* TutorialCell */,
 			);
 			path = Cells;
@@ -655,6 +659,15 @@
 				EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		EDD6B1F91A1277B500DBEBBD /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6B1FA1A1277E000DBEBBD /* PTMenuTableViewCell.h */,
+				EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */,
+			);
+			path = MenuCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -830,6 +843,7 @@
 				847C839B1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m in Sources */,
 				847C835F1A10C47100F913F2 /* PTValidationViewController.m in Sources */,
 				847C838F1A10DA4700F913F2 /* PTCalendarViewController.m in Sources */,
+				EDD6B1FC1A1277E000DBEBBD /* PTMenuTableViewCell.m in Sources */,
 				847C83AD1A10DB7800F913F2 /* PTProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

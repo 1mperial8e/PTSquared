@@ -146,9 +146,57 @@
                     <view key="view" contentMode="scaleToFill" id="zhu-Gt-wnw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.8862745098" green="0.36862745099999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GLZ-82-tSV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="72" id="vhw-fn-aq2" customClass="PTMenuTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhw-fn-aq2" id="JzN-CX-O6t">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mma-k5-Rat" userLabel="Logo - UIImage">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfQ-Mw-rR5" userLabel="MenuItem - UILabel">
+                                                    <rect key="frame" x="88" y="0.0" width="212" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuItemLogoUIImageView" destination="mma-k5-Rat" id="Kva-4T-RaD"/>
+                                            <outlet property="menuTitleUILabel" destination="wfQ-Mw-rR5" id="lPH-yh-eTI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hlo-yd-tOq" id="pjk-ng-Nqx"/>
+                                    <outlet property="delegate" destination="Hlo-yd-tOq" id="ypA-eA-AYI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GLZ-82-tSV" firstAttribute="top" secondItem="zhu-Gt-wnw" secondAttribute="top" id="A5K-dY-Io2"/>
+                            <constraint firstItem="GLZ-82-tSV" firstAttribute="leading" secondItem="zhu-Gt-wnw" secondAttribute="leading" id="Bux-BS-njp"/>
+                            <constraint firstItem="8el-pc-fqh" firstAttribute="top" secondItem="GLZ-82-tSV" secondAttribute="bottom" id="DS7-qs-CQt"/>
+                            <constraint firstAttribute="trailing" secondItem="GLZ-82-tSV" secondAttribute="trailing" id="afk-zK-YyQ"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="topVerticalSpaceConstraint" destination="A5K-dY-Io2" id="qtg-lD-z0G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVk-ST-6iI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
