@@ -48,6 +48,8 @@
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
 		EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */; };
 		EDD6B1F21A12227000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F11A12227000DBEBBD /* 11.png */; };
+		EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */; };
+		EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F71A1250C100DBEBBD /* menu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,9 @@
 		EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileManager.h; sourceTree = "<group>"; };
 		EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileManager.m; sourceTree = "<group>"; };
 		EDD6B1F11A12227000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		EDD6B1F41A124DD800DBEBBD /* PTClientNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientNavController.h; sourceTree = "<group>"; };
+		EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientNavController.m; sourceTree = "<group>"; };
+		EDD6B1F71A1250C100DBEBBD /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +279,7 @@
 		847C833A1A10BFB300F913F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6B1F71A1250C100DBEBBD /* menu.png */,
 				EDD6B1F11A12227000DBEBBD /* 11.png */,
 				847C833F1A10C02600F913F2 /* Images.xcassets */,
 			);
@@ -437,6 +443,7 @@
 		847C83801A10D92000F913F2 /* ClientMode */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6B1F31A124DB700DBEBBD /* NavigationController */,
 				847C83811A10D92000F913F2 /* CalendarVC */,
 				847C83821A10D92000F913F2 /* CMHomeScreenVC */,
 				847C83831A10D92000F913F2 /* CMSessionDetailsVC */,
@@ -641,6 +648,15 @@
 			path = ProfileManager;
 			sourceTree = "<group>";
 		};
+		EDD6B1F31A124DB700DBEBBD /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6B1F41A124DD800DBEBBD /* PTClientNavController.h */,
+				EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -728,6 +744,7 @@
 				EDD6B1F21A12227000DBEBBD /* 11.png in Resources */,
 				847C83401A10C02600F913F2 /* Images.xcassets in Resources */,
 				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
+				EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
 				847C833E1A10BFE700F913F2 /* ClientMode.storyboard in Resources */,
 			);
@@ -786,6 +803,7 @@
 				847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */,
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
 				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
+				EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */,
 				EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */,
 				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,
 				ED6015F21A1101F90043120A /* PTGAManager.m in Sources */,
