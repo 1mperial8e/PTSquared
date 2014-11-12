@@ -19,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self configureStatusBar];
     
 // login to Facebook
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
@@ -36,6 +37,13 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [FBAppCall handleDidBecomeActive];
+}
+
+#pragma mark - Private
+
+- (void)configureStatusBar
+{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 @end
