@@ -7,6 +7,7 @@
 //
 
 #import "PTCalendarViewController.h"
+#import "PTClientNavController.h"
 
 @interface PTCalendarViewController ()
 
@@ -14,9 +15,17 @@
 
 @implementation PTCalendarViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [((PTClientNavController *)self.navigationController) setTitleLabelToNavigationBar:@"Hello"];
 }
 
 @end

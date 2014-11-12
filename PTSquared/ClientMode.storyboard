@@ -152,6 +152,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="72" id="vhw-fn-aq2" customClass="PTMenuTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="72"/>
@@ -195,6 +196,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="menuTableView" destination="GLZ-82-tSV" id="Ikw-J7-WxX"/>
                         <outlet property="topVerticalSpaceConstraint" destination="A5K-dY-Io2" id="qtg-lD-z0G"/>
                     </connections>
                 </viewController>

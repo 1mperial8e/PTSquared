@@ -16,6 +16,7 @@
 #import "PTNutritionViewController.h"
 #import "PTProfileViewController.h"
 #import "PTLogoutViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 static NSString *const CMTutorialShow = @"CMTutorialShow";
 static NSString *const CMClientStoryBoardName= @"ClientMode";
@@ -79,13 +80,25 @@ static NSString *const CMClientStoryBoardName= @"ClientMode";
     self.menuControllers = @[homeViewController, calendarViewController, workoutViewController, nutritionViewController, profileViewController, logoutViewController];
 }
 
+- (void)clearNavigationBar
+{
+    UIView *view = [self.navigationController.navigationBar viewWithTag:PTCNImageTag];
+    [view removeFromSuperview];
+    view = [self.navigationController.navigationBar viewWithTag:PTCNLabelTag];
+    [view removeFromSuperview];
+}
+
 #pragma mark - PTMenuViewControllerDelegate
 
 - (void)selectMenuItem:(NSInteger)controllerIndex
 {
-    [self.navigationController popToRootViewControllerAnimated:NO];
-    [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:YES];
-    [self.navigationController configureNavigationBar:self.menuControllers[controllerIndex]];
+    if (![self.navigationController.topViewController isEqual:self.menuControllers[controllerIndex]]){
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:NO];
+        [self clearNavigationBar];
+        [self.navigationController configureNavigationBarItems:self.menuControllers[controllerIndex]];
+    }
+    [self.navigationController menuButtonPress];
 }
 
 @end

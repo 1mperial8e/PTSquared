@@ -7,6 +7,7 @@
 //
 
 #import "PTCMHomeScreenViewController.h"
+#import "PTClientNavController.h"
 
 @interface PTCMHomeScreenViewController ()
 
@@ -19,6 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [((PTClientNavController *)self.navigationController) setTitleImageToNavigationBar:[UIImage imageNamedFile:@"22"]];
 }
 
 @end
