@@ -84,7 +84,7 @@ static NSString *const CMClientStoryBoardName= @"ClientMode";
 - (void)selectMenuItem:(NSInteger)controllerIndex
 {
     [self.navigationController popToRootViewControllerAnimated:NO];
-    [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:YES];
+    [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:NO];
     [self.navigationController configureNavigationBar:self.menuControllers[controllerIndex]];
 }
 
