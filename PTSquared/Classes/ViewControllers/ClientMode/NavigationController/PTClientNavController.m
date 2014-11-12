@@ -8,8 +8,8 @@
 
 #import "PTClientNavController.h"
 
-static CGFloat const PTCNMinMenuActionOffset = 60;
-static CGFloat const PTCNMenuOffset = 40;
+static CGFloat const PTCNMinMenuActionOffset = 120;
+static CGFloat const PTCNMenuOffset = 60;
 static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 
 @interface PTClientNavController ()
@@ -86,10 +86,10 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
     return startPoint;
 }
 
-- (CGPoint)calculateCurrentCenterOfView:(CGPoint)fromCurrentLocation
+- (CGPoint)calculateCurrentCenterOfView:(CGPoint)fromCurrentLocation viewLocation:(CGPoint)viewLocation
 {
     CGPoint fromPoint = self.view.center;
-    fromPoint.x = fromCurrentLocation.x + self.parentViewController.view.frame.size.width / 2;
+    fromPoint.x = fromCurrentLocation.x - viewLocation.x + self.parentViewController.view.frame.size.width / 2;
     return fromPoint;
 }
 
@@ -109,6 +109,7 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 - (void)configurePanGesture
 {
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panMenuButton:)];
+    panGesture.delaysTouchesBegan = NO;
     [self.menuButton addGestureRecognizer:panGesture];
 }
 
@@ -126,7 +127,7 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
             break;
         }
         case UIGestureRecognizerStateEnded: {
-            [self endMoveWithLocation:[gesture locationInView:self.parentViewController.view]];
+            [self endMoveWithGlobalLocation:[gesture locationInView:self.parentViewController.view] viewLocation:[gesture locationInView:self.view]];
             break;
         }
         default:
@@ -146,23 +147,38 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
     }
 }
 
-- (void)endMoveWithLocation:(CGPoint)location
+- (void)endMoveWithGlobalLocation:(CGPoint)location viewLocation:(CGPoint)viewLocation
 {
+    [self setAnimationDirection:location viewLocation:viewLocation];
     if (location.x != [self calculateOpenMenuPosition].x || location.x != [self calculateClosedMenuPosition].x) {
         
         CABasicAnimation *animation = [self createAnimationForMenu];
         if (!self.isMenuOpened) {
-            animation.fromValue = [NSValue valueWithCGPoint:[self calculateCurrentCenterOfView:location]];
+            animation.fromValue = [NSValue valueWithCGPoint:[self calculateCurrentCenterOfView:location viewLocation:viewLocation]];
             animation.toValue = [NSValue valueWithCGPoint:[self calculateOpenMenuPosition]];
             [self.view.layer addAnimation:animation forKey:nil];
             self.view.layer.position = [self calculateOpenMenuPosition];
         } else {
-            animation.fromValue = [NSValue valueWithCGPoint:[self calculateCurrentCenterOfView:location]];
+            animation.fromValue = [NSValue valueWithCGPoint:[self calculateCurrentCenterOfView:location viewLocation:viewLocation]];
             animation.toValue = [NSValue valueWithCGPoint:[self calculateClosedMenuPosition]];
             [self.view.layer addAnimation:animation forKey:nil];
             self.view.layer.position = [self calculateClosedMenuPosition];
         }
         self.isMenuOpened = !self.isMenuOpened;
+    }
+}
+
+- (void)setAnimationDirection:(CGPoint)location viewLocation:(CGPoint)viewLocation
+{
+    if (self.isMenuOpened) {
+        CGFloat pointX = self.parentViewController.view.frame.size.width - PTCNMinMenuActionOffset - PTCNMenuOffset;
+        if (location.x - viewLocation.x > pointX){
+            self.isMenuOpened = !self.isMenuOpened;
+        }
+    } else {
+        if (location.x - viewLocation.x < PTCNMinMenuActionOffset){
+            self.isMenuOpened = !self.isMenuOpened;
+        }
     }
 }
 
