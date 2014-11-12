@@ -41,6 +41,7 @@
 		847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A91A10DB6300F913F2 /* PTNutritionViewController.m */; };
 		847C83AD1A10DB7800F913F2 /* PTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */; };
 		847C83B01A10DB9100F913F2 /* PTWorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */; };
+		84EF34BE1A1366A600C760A4 /* PTGoogleMapsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EF34BD1A1366A600C760A4 /* PTGoogleMapsManager.m */; };
 		972165EC7EE44F08813BE722 /* libPods-PTSquared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F1F2D3EE04A6087CB117B /* libPods-PTSquared.a */; };
 		ED6015F21A1101F90043120A /* PTGAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F11A1101F90043120A /* PTGAManager.m */; };
 		ED6015F61A1116F80043120A /* PTTutorialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F51A1116F80043120A /* PTTutorialCell.m */; };
@@ -131,6 +132,8 @@
 		847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileViewController.m; sourceTree = "<group>"; };
 		847C83AE1A10DB9100F913F2 /* PTWorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTWorkoutsViewController.h; sourceTree = "<group>"; };
 		847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTWorkoutsViewController.m; sourceTree = "<group>"; };
+		84EF34BC1A1366A600C760A4 /* PTGoogleMapsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGoogleMapsManager.h; sourceTree = "<group>"; };
+		84EF34BD1A1366A600C760A4 /* PTGoogleMapsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGoogleMapsManager.m; sourceTree = "<group>"; };
 		8DC69774AE0EE373CDC7B4C7 /* Pods-PTSquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTSquared.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTSquared/Pods-PTSquared.release.xcconfig"; sourceTree = "<group>"; };
 		C8C05CF01D4B439B474A2ADD /* Pods-PTSquared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTSquared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTSquared/Pods-PTSquared.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1F1F2D3EE04A6087CB117B /* libPods-PTSquared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PTSquared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -573,9 +576,19 @@
 			path = WorkoutsVC;
 			sourceTree = "<group>";
 		};
+		84EF34BB1A13668300C760A4 /* GoogleMapsManager */ = {
+			isa = PBXGroup;
+			children = (
+				84EF34BC1A1366A600C760A4 /* PTGoogleMapsManager.h */,
+				84EF34BD1A1366A600C760A4 /* PTGoogleMapsManager.m */,
+			);
+			path = GoogleMapsManager;
+			sourceTree = "<group>";
+		};
 		ED6015EC1A1101C00043120A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				84EF34BB1A13668300C760A4 /* GoogleMapsManager */,
 				EDD6B1ED1A12007E00DBEBBD /* ProfileManager */,
 				ED6015EF1A1101F90043120A /* GAManager */,
 			);
@@ -847,6 +860,7 @@
 				847C839E1A10DAFB00F913F2 /* PTContainerViewController.m in Sources */,
 				847C83A71A10DB4300F913F2 /* PTNutritionDetailsViewController.m in Sources */,
 				847C83951A10DAA500F913F2 /* PTCMSessionDetailsViewController.m in Sources */,
+				84EF34BE1A1366A600C760A4 /* PTGoogleMapsManager.m in Sources */,
 				ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */,
 				847C83531A10C44000F913F2 /* PTClientRegistrationViewController.m in Sources */,
 				847C83721A10D35600F913F2 /* PTHomeScreenViewController.m in Sources */,
