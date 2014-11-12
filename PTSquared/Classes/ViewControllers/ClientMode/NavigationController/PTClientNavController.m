@@ -12,6 +12,7 @@ static CGFloat const PTCNMinMenuActionOffset = 120;
 static CGFloat const PTCNMenuOffset = 60;
 static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 
+
 @interface PTClientNavController ()
 
 @property (assign, nonatomic) BOOL isMenuOpened;
@@ -28,8 +29,8 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 {
     self = [super initWithRootViewController:rootViewController];
     if (self) {
-        [self configureNavigationBar:(UIViewController *)rootViewController];
-        [self configurePanGesture];
+        [self configureNavigationBarStyle];
+        [self configureNavigationBarItems:(UIViewController *)rootViewController];
     }
     return self;
 }
@@ -60,18 +61,55 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 
 #pragma mark - Public
 
-- (void)configureNavigationBar:(UIViewController *)rootViewController
+- (void)configureNavigationBarItems:(UIViewController *)rootViewController
 {
     UIImage *buttonImage = [UIImage imageNamedFile:@"menu"];
     self.menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, buttonImage.size.width, buttonImage.size.height)];
     [self.menuButton setImage:buttonImage forState:UIControlStateNormal];
     UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc] initWithCustomView:self.menuButton];
     [self.menuButton addTarget:self action: @selector(menuButtonPress) forControlEvents:UIControlEventTouchUpInside];
-    
     rootViewController.navigationItem.leftBarButtonItem = menuBarButton;
+    
+    [self configurePanGesture];
+}
+
+- (void)setTitleImageToNavigationBar:(UIImage *)image
+{
+    CGPoint navBarCenter = self.navigationBar.center;
+    CGRect imageFrame = CGRectMake(navBarCenter.x - image.size.width / 2, 0, image.size.width, image.size.height);
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.frame = imageFrame;
+    imageView.tag = PTCNImageTag;
+    [self.navigationBar addSubview:imageView];
+}
+
+- (void)setTitleLabelToNavigationBar:(NSString *)titleText
+{
+    if (titleText.length) {
+        CGSize navBarSize = self.navigationBar.frame.size;
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, navBarSize.width - navBarSize.height * 2,  navBarSize.height)];
+        titleLabel.text = titleText;
+        titleLabel.minimumScaleFactor = 0.5;
+        titleLabel.adjustsFontSizeToFitWidth = YES;
+        titleLabel.center = CGPointMake(navBarSize.width / 2, navBarSize.height / 2);
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.numberOfLines = 0;
+        titleLabel.tag = PTCNLabelTag;
+        [self.navigationBar addSubview:titleLabel];
+    }
 }
 
 #pragma mark - Private
+
+- (void)configureNavigationBarStyle
+{
+    self.navigationBar.translucent = NO;
+    self.navigationBar.barTintColor = UIColorFromRGB(0xB5B5B5);
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.clipsToBounds = YES;
+}
 
 - (CGPoint)calculateOpenMenuPosition
 {

@@ -9,8 +9,9 @@
 #ifndef PTSquared_Prefix_pch
 #define PTSquared_Prefix_pch
 
-#import <UIKit/UIKit.h>
-#import "UIColor+ColorAddition.h"
-#import "UIImage+ImageAddition.h"
+    #import <UIKit/UIKit.h>
+    #import "UIColor+ColorAddition.h"
+    #import "UIImage+ImageAddition.h"
+    #import "PTMacros.h"
 
 #endif

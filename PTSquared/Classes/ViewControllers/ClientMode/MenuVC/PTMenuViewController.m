@@ -16,6 +16,7 @@ static NSString *const PTMMenuImageName = @"itemImage";
 @interface PTMenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topVerticalSpaceConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 
 @property (strong, nonatomic) NSArray *menuItems;
 
@@ -30,6 +31,7 @@ static NSString *const PTMMenuImageName = @"itemImage";
     [super viewDidLoad];
     [self configureDataSource];
     [self setTopOffsetForMenu];
+    [self setBackgroundForView];
 }
 
 #pragma mark - UITableViewDataSource
@@ -72,6 +74,11 @@ static NSString *const PTMMenuImageName = @"itemImage";
 {
     CGFloat offset = self.parentViewController.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
     self.topVerticalSpaceConstraint.constant = offset;
+}
+
+- (void)setBackgroundForView
+{
+    self.view.backgroundColor = UIColorFromRGB(0xB5B5B5);
 }
 
 @end

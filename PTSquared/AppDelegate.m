@@ -15,6 +15,7 @@
 
 @implementation AppDelegate
 
+#pragma mark - LifeCycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
