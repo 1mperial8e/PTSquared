@@ -8,4 +8,6 @@
 
 @interface PTClientNavController : UINavigationController
 
+- (void)configureNavigationBar:(UIViewController *)rootViewController;
+
 @end

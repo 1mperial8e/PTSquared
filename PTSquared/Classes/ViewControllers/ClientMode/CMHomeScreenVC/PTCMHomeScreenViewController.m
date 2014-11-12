@@ -14,6 +14,8 @@
 
 @implementation PTCMHomeScreenViewController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

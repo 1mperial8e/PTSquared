@@ -119,7 +119,7 @@
         <!--Logout View Controller-->
         <scene sceneID="8Y4-U4-ZKg">
             <objects>
-                <viewController id="ATt-JV-f9M" customClass="PTLogoutViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logout" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ATt-JV-f9M" customClass="PTLogoutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VEj-mV-6zF"/>
                         <viewControllerLayoutGuide type="bottom" id="CBe-se-IoE"/>
@@ -205,7 +205,7 @@
         <!--Calendar View Controller-->
         <scene sceneID="BMd-Io-hyF">
             <objects>
-                <viewController id="gaC-wx-OEx" customClass="PTCalendarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gaC-wx-OEx" customClass="PTCalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A6K-xZ-ee8"/>
                         <viewControllerLayoutGuide type="bottom" id="XRx-kx-hqh"/>
@@ -213,6 +213,15 @@
                     <view key="view" contentMode="scaleToFill" id="rL0-Tz-Cee">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-wJ-gfX">
+                                <rect key="frame" x="116" y="244" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -224,7 +233,7 @@
         <!--Workouts View Controller-->
         <scene sceneID="8HW-fM-2pi">
             <objects>
-                <viewController id="OVS-Pi-p3V" customClass="PTWorkoutsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="workout" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OVS-Pi-p3V" customClass="PTWorkoutsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Mp-W6-ePD"/>
                         <viewControllerLayoutGuide type="bottom" id="7cj-jb-1j6"/>
@@ -243,7 +252,7 @@
         <!--Profile View Controller-->
         <scene sceneID="qtH-fC-9H0">
             <objects>
-                <viewController id="8yY-vK-SXX" customClass="PTProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8yY-vK-SXX" customClass="PTProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="evf-T8-HjR"/>
                         <viewControllerLayoutGuide type="bottom" id="LkJ-LO-k6o"/>
@@ -251,6 +260,14 @@
                     <view key="view" contentMode="scaleToFill" id="xRm-jD-CBE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-pR-VpB">
+                                <rect key="frame" x="92" y="290" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -262,7 +279,7 @@
         <!--Nutrition View Controller-->
         <scene sceneID="uuk-wj-nDX">
             <objects>
-                <viewController id="E1j-51-swZ" customClass="PTNutritionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nutrition" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E1j-51-swZ" customClass="PTNutritionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nEk-9F-U8P"/>
                         <viewControllerLayoutGuide type="bottom" id="HzY-q0-cp4"/>
@@ -270,6 +287,14 @@
                     <view key="view" contentMode="scaleToFill" id="EU3-kE-Emx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nutrition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-5A-AL1">
+                                <rect key="frame" x="127" y="274" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -327,6 +352,14 @@
                     <view key="view" contentMode="scaleToFill" id="vjE-lV-iuU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9o-LC-2Yt">
+                                <rect key="frame" x="57" y="253" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

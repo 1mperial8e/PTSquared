@@ -10,6 +10,8 @@
 #import "PTMenuTableViewCell.h"
 
 static NSString *const PTMCellIdentifier = @"menuCell";
+static NSString *const PTMMenuItemName = @"itemName";
+static NSString *const PTMMenuImageName = @"itemImage";
 
 @interface PTMenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -43,7 +45,10 @@ static NSString *const PTMCellIdentifier = @"menuCell";
     if (!cell) {
         cell = [[PTMenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PTMCellIdentifier];
     }
-    cell.menuTitleUILabel.text = self.menuItems[indexPath.row];
+    cell.menuTitleUILabel.text = [(NSDictionary *)self.menuItems[indexPath.row] valueForKey:PTMMenuItemName];
+    NSString *imageName = [(NSDictionary *)self.menuItems[indexPath.row] valueForKey:PTMMenuImageName];
+    cell.imageView.image = [UIImage imageNamedFile:imageName];
+    
     return cell;
 }
 
@@ -51,7 +56,7 @@ static NSString *const PTMCellIdentifier = @"menuCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self.delegate selectMenuItem:indexPath.row];
 }
 
 #pragma mark - Private
@@ -59,7 +64,7 @@ static NSString *const PTMCellIdentifier = @"menuCell";
 - (void)configureDataSource
 {
     if (!self.menuItems) {
-        self.menuItems = @[@"HOME", @"CALENDAR", @"WORKOUT", @"NUTRITION", @"PROFILE", @"LOGOUT"];
+        self.menuItems = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"]];
     }
 }
 

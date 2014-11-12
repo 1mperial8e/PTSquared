@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>itemName</key>
+		<string>HOME</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>itemName</key>
+		<string>CALENDAR</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>itemName</key>
+		<string>WORKOUT</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>itemName</key>
+		<string>NUTRITION</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>itemName</key>
+		<string>PROFILE</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>itemName</key>
+		<string>LOGOUT</string>
+		<key>itemImage</key>
+		<string>11</string>
+	</dict>
+</array>
+</plist>

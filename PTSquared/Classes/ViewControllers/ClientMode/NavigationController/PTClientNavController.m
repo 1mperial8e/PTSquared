@@ -8,6 +8,7 @@
 
 #import "PTClientNavController.h"
 
+static CGFloat const PTCNMinMenuActionOffset = 60;
 static CGFloat const PTCNMenuOffset = 40;
 static CGFloat const PTCNMenuAnimationDuration = 0.3f;
 
@@ -57,7 +58,7 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
     self.isMenuOpened = !self.isMenuOpened;
 }
 
-#pragma mark - Private
+#pragma mark - Public
 
 - (void)configureNavigationBar:(UIViewController *)rootViewController
 {
@@ -69,6 +70,8 @@ static CGFloat const PTCNMenuAnimationDuration = 0.3f;
     
     rootViewController.navigationItem.leftBarButtonItem = menuBarButton;
 }
+
+#pragma mark - Private
 
 - (CGPoint)calculateOpenMenuPosition
 {

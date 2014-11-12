@@ -45,6 +45,7 @@
 		ED6015F21A1101F90043120A /* PTGAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F11A1101F90043120A /* PTGAManager.m */; };
 		ED6015F61A1116F80043120A /* PTTutorialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F51A1116F80043120A /* PTTutorialCell.m */; };
 		ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */; };
+		ED9041051A1339C900E01B92 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED9041041A1339C900E01B92 /* MenuItems.plist */; };
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
 		EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */; };
 		EDD6B1F21A12227000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F11A12227000DBEBBD /* 11.png */; };
@@ -139,14 +140,15 @@
 		ED6015F51A1116F80043120A /* PTTutorialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTutorialCell.m; sourceTree = "<group>"; };
 		ED6015F91A1119BB0043120A /* UIImage+ImageAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageAddition.h"; sourceTree = "<group>"; };
 		ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageAddition.m"; sourceTree = "<group>"; };
+		ED9041041A1339C900E01B92 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
 		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
 		EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorAddition.m"; sourceTree = "<group>"; };
 		EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileManager.h; sourceTree = "<group>"; };
 		EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileManager.m; sourceTree = "<group>"; };
-		EDD6B1F11A12227000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		EDD6B1F11A12227000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11.png; path = ../11.png; sourceTree = "<group>"; };
 		EDD6B1F41A124DD800DBEBBD /* PTClientNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientNavController.h; sourceTree = "<group>"; };
 		EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientNavController.m; sourceTree = "<group>"; };
-		EDD6B1F71A1250C100DBEBBD /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		EDD6B1F71A1250C100DBEBBD /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../menu.png; sourceTree = "<group>"; };
 		EDD6B1FA1A1277E000DBEBBD /* PTMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMenuTableViewCell.h; sourceTree = "<group>"; };
 		EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMenuTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,8 +284,8 @@
 		847C833A1A10BFB300F913F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EDD6B1F71A1250C100DBEBBD /* menu.png */,
-				EDD6B1F11A12227000DBEBBD /* 11.png */,
+				ED9041031A13399800E01B92 /* Plists */,
+				ED9041021A13398A00E01B92 /* Images */,
 				847C833F1A10C02600F913F2 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -634,6 +636,23 @@
 			path = "UIImage+ImageWithJPGFile";
 			sourceTree = "<group>";
 		};
+		ED9041021A13398A00E01B92 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6B1F71A1250C100DBEBBD /* menu.png */,
+				EDD6B1F11A12227000DBEBBD /* 11.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		ED9041031A13399800E01B92 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				ED9041041A1339C900E01B92 /* MenuItems.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
 		EDD6B1E61A11ECBA00DBEBBD /* UIColor+ColorAddition */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,6 +778,7 @@
 				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
 				EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
+				ED9041051A1339C900E01B92 /* MenuItems.plist in Resources */,
 				847C833E1A10BFE700F913F2 /* ClientMode.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
