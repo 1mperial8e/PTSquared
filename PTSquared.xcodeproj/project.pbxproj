@@ -53,6 +53,10 @@
 		ED90414F1A13911C00E01B92 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414D1A13911C00E01B92 /* menu.png */; };
 		ED9041501A13911C00E01B92 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414E1A13911C00E01B92 /* 11.png */; };
 		ED9041521A13913200E01B92 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = ED9041511A13913200E01B92 /* 22.png */; };
+		EDD5978C1A1533730049D59A /* PTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597881A1533720049D59A /* PTCoreDataManager.m */; };
+		EDD5978D1A1533730049D59A /* PTObjectDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978A1A1533730049D59A /* PTObjectDescription.m */; };
+		EDD597911A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978F1A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld */; };
+		EDD597941A1536270049D59A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD597931A1536270049D59A /* CoreData.framework */; };
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
 		EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */; };
 		EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */; };
@@ -157,6 +161,12 @@
 		ED90414D1A13911C00E01B92 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		ED90414E1A13911C00E01B92 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		ED9041511A13913200E01B92 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		EDD597871A1533720049D59A /* PTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCoreDataManager.h; sourceTree = "<group>"; };
+		EDD597881A1533720049D59A /* PTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCoreDataManager.m; sourceTree = "<group>"; };
+		EDD597891A1533720049D59A /* PTObjectDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTObjectDescription.h; path = ../PTObjectDescription.h; sourceTree = "<group>"; };
+		EDD5978A1A1533730049D59A /* PTObjectDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTObjectDescription.m; path = ../PTObjectDescription.m; sourceTree = "<group>"; };
+		EDD597901A1535CE0049D59A /* PTSquaredDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PTSquaredDataBase.xcdatamodel; sourceTree = "<group>"; };
+		EDD597931A1536270049D59A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
 		EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorAddition.m"; sourceTree = "<group>"; };
 		EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileManager.h; sourceTree = "<group>"; };
@@ -172,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD597941A1536270049D59A /* CoreData.framework in Frameworks */,
 				ED9041091A135DD600E01B92 /* QuartzCore.framework in Frameworks */,
 				972165EC7EE44F08813BE722 /* libPods-PTSquared.a in Frameworks */,
 			);
@@ -199,6 +210,7 @@
 		83C4C2098CCA40E588019F7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDD597931A1536270049D59A /* CoreData.framework */,
 				ED9041081A135DD600E01B92 /* QuartzCore.framework */,
 				EA1F1F2D3EE04A6087CB117B /* libPods-PTSquared.a */,
 			);
@@ -289,6 +301,7 @@
 		847C83341A10BFB300F913F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EDD5978E1A1533FC0049D59A /* DataModel */,
 				ED6015EE1A1101ED0043120A /* OtherClasses */,
 				ED6015ED1A1101E20043120A /* Cells */,
 				ED6015EC1A1101C00043120A /* Managers */,
@@ -619,6 +632,7 @@
 		ED6015EC1A1101C00043120A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EDD597861A1533720049D59A /* CoreData */,
 				842FFC751A137F6500829EA7 /* FacebookManager */,
 				842FFC711A137D3300829EA7 /* AnimationsManager */,
 				84EF34BB1A13668300C760A4 /* GoogleMapsManager */,
@@ -707,6 +721,41 @@
 				ED9041071A1358EF00E01B92 /* PTMacros.h */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		EDD597861A1533720049D59A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EDD597871A1533720049D59A /* PTCoreDataManager.h */,
+				EDD597881A1533720049D59A /* PTCoreDataManager.m */,
+				EDD5978B1A1533730049D59A /* ObjectDescription */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EDD5978B1A1533730049D59A /* ObjectDescription */ = {
+			isa = PBXGroup;
+			children = (
+				EDD597891A1533720049D59A /* PTObjectDescription.h */,
+				EDD5978A1A1533730049D59A /* PTObjectDescription.m */,
+			);
+			path = ObjectDescription;
+			sourceTree = "<group>";
+		};
+		EDD5978E1A1533FC0049D59A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDD597921A1535E80049D59A /* EntityClasses */,
+				EDD5978F1A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		EDD597921A1535E80049D59A /* EntityClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EntityClasses;
 			sourceTree = "<group>";
 		};
 		EDD6B1E61A11ECBA00DBEBBD /* UIColor+ColorAddition */ = {
@@ -894,9 +943,11 @@
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
 				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
 				842FFC781A137F8700829EA7 /* PTFacebookManager.m in Sources */,
+				EDD5978D1A1533730049D59A /* PTObjectDescription.m in Sources */,
 				EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */,
 				EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */,
 				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,
+				EDD5978C1A1533730049D59A /* PTCoreDataManager.m in Sources */,
 				ED6015F21A1101F90043120A /* PTGAManager.m in Sources */,
 				847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */,
 				847C830E1A10BE2500F913F2 /* main.m in Sources */,
@@ -913,6 +964,7 @@
 				847C836C1A10D33200F913F2 /* PTAddAttendeeViewController.m in Sources */,
 				847C83501A10C43100F913F2 /* PTClientLoginViewController.m in Sources */,
 				847C83751A10D36400F913F2 /* PTScanMembershipViewController.m in Sources */,
+				EDD597911A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld in Sources */,
 				847C83561A10C44F00F913F2 /* PTClientScreenViewController.m in Sources */,
 				847C83A41A10DB2C00F913F2 /* PTMenuViewController.m in Sources */,
 				847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */,
@@ -1137,6 +1189,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDD5978F1A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDD597901A1535CE0049D59A /* PTSquaredDataBase.xcdatamodel */,
+			);
+			currentVersion = EDD597901A1535CE0049D59A /* PTSquaredDataBase.xcdatamodel */;
+			path = PTSquaredDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 847C83001A10BE2500F913F2 /* Project object */;
 }
