@@ -50,12 +50,12 @@
 		ED6015FB1A1119BB0043120A /* UIImage+ImageAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015FA1A1119BB0043120A /* UIImage+ImageAddition.m */; };
 		ED9041051A1339C900E01B92 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED9041041A1339C900E01B92 /* MenuItems.plist */; };
 		ED9041091A135DD600E01B92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9041081A135DD600E01B92 /* QuartzCore.framework */; };
-		ED90410B1A13650F00E01B92 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90410A1A13650F00E01B92 /* 22.png */; };
+		ED90414F1A13911C00E01B92 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414D1A13911C00E01B92 /* menu.png */; };
+		ED9041501A13911C00E01B92 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414E1A13911C00E01B92 /* 11.png */; };
+		ED9041521A13913200E01B92 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = ED9041511A13913200E01B92 /* 22.png */; };
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
 		EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */; };
-		EDD6B1F21A12227000DBEBBD /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F11A12227000DBEBBD /* 11.png */; };
 		EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */; };
-		EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD6B1F71A1250C100DBEBBD /* menu.png */; };
 		EDD6B1FC1A1277E000DBEBBD /* PTMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -154,15 +154,15 @@
 		ED9041041A1339C900E01B92 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
 		ED9041071A1358EF00E01B92 /* PTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTMacros.h; sourceTree = "<group>"; };
 		ED9041081A135DD600E01B92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		ED90410A1A13650F00E01B92 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 22.png; path = ../../../../../../Desktop/22.png; sourceTree = "<group>"; };
+		ED90414D1A13911C00E01B92 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		ED90414E1A13911C00E01B92 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		ED9041511A13913200E01B92 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
 		EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorAddition.m"; sourceTree = "<group>"; };
 		EDD6B1EE1A1200AB00DBEBBD /* PTProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProfileManager.h; sourceTree = "<group>"; };
 		EDD6B1EF1A1200AB00DBEBBD /* PTProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileManager.m; sourceTree = "<group>"; };
-		EDD6B1F11A12227000DBEBBD /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11.png; path = ../11.png; sourceTree = "<group>"; };
 		EDD6B1F41A124DD800DBEBBD /* PTClientNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTClientNavController.h; sourceTree = "<group>"; };
 		EDD6B1F51A124DD800DBEBBD /* PTClientNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTClientNavController.m; sourceTree = "<group>"; };
-		EDD6B1F71A1250C100DBEBBD /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../menu.png; sourceTree = "<group>"; };
 		EDD6B1FA1A1277E000DBEBBD /* PTMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMenuTableViewCell.h; sourceTree = "<group>"; };
 		EDD6B1FB1A1277E000DBEBBD /* PTMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMenuTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -686,9 +686,9 @@
 		ED9041021A13398A00E01B92 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ED90410A1A13650F00E01B92 /* 22.png */,
-				EDD6B1F71A1250C100DBEBBD /* menu.png */,
-				EDD6B1F11A12227000DBEBBD /* 11.png */,
+				ED9041511A13913200E01B92 /* 22.png */,
+				ED90414D1A13911C00E01B92 /* menu.png */,
+				ED90414E1A13911C00E01B92 /* 11.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -829,13 +829,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				847C83171A10BE2500F913F2 /* Login.storyboard in Resources */,
-				EDD6B1F21A12227000DBEBBD /* 11.png in Resources */,
-				ED90410B1A13650F00E01B92 /* 22.png in Resources */,
 				847C83401A10C02600F913F2 /* Images.xcassets in Resources */,
 				847C833C1A10BFD700F913F2 /* TrainerMode.storyboard in Resources */,
-				EDD6B1F81A1250C100DBEBBD /* menu.png in Resources */,
+				ED9041501A13911C00E01B92 /* 11.png in Resources */,
 				847C831C1A10BE2500F913F2 /* LaunchScreen.xib in Resources */,
+				ED90414F1A13911C00E01B92 /* menu.png in Resources */,
 				ED9041051A1339C900E01B92 /* MenuItems.plist in Resources */,
+				ED9041521A13913200E01B92 /* 22.png in Resources */,
 				847C833E1A10BFE700F913F2 /* ClientMode.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
