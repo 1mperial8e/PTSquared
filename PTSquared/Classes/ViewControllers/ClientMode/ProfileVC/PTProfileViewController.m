@@ -8,6 +8,7 @@
 
 #import "PTProfileViewController.h"
 #import "PTPersonalImageProfileCell.h"
+#import "PTHeaderTableViewCell.h"
 
 static NSString *const PTPCellIdentifier = @"ProfileCell";
 static NSString *const PTPCellImageIdentifier = @"ProfileCellImage";
@@ -16,10 +17,6 @@ static NSInteger const sizeCellImage = 200;
 
 static CGFloat const sectionHeaderHeight = 30;
 static CGFloat const sectionViewHeight = 25;
-static CGFloat const sectionViewLabelHeight = 17;
-static CGFloat const sectionLabelOffsetX = 15;
-static CGFloat const sectionLabelOffsetY = 5;
-static NSInteger const sectionLabelFontOfSize = 17;
 
 @interface PTProfileViewController ()
 
@@ -91,20 +88,18 @@ static NSInteger const sectionLabelFontOfSize = 17;
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, sectionViewHeight)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(sectionLabelOffsetX, sectionLabelOffsetY, tableView.frame.size.width, sectionViewLabelHeight)];
-    [label setFont:[UIFont boldSystemFontOfSize:sectionLabelFontOfSize]];
-    label.textColor = [UIColor whiteColor];
-    
-    NSDictionary *sectionNameDictionary = self.arrayProfile[section];
-    NSString *sectionName = [sectionNameDictionary allKeys][0];
-    label.text = sectionName;
-    
-    if (section < [self.arrayProfile count]-1) {
-        view.backgroundColor = UIColorFromRGB(0x9D9D9D);
+    PTHeaderTableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"headerCell"];
+    if (!headerView) {
+        headerView = [[PTHeaderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"headerCell"];
     }
-    [view addSubview:label];
-    return view;
+    NSDictionary *sectionNameDictionary = self.arrayProfile[section];
+    headerView.nameSectionLabel.text = [sectionNameDictionary allKeys][0];
+    headerView.backgroundColor = UIColorFromRGB(0x9D9D9D);
+    if (section == [self.arrayProfile count]-1) {
+        headerView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    }
+    
+    return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
