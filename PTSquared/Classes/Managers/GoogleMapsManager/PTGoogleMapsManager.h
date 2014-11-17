@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-typedef void (^localityBlock)(NSString*);
+typedef void (^localityBlock)(NSString *);
 
 @interface PTGoogleMapsManager : NSObject
 
@@ -17,7 +17,7 @@ typedef void (^localityBlock)(NSString*);
 
 + (instancetype)sharedInstance;
 
-- (void)findMap:(GMSMapView*)mapView Latitube:(CLLocationDegrees)latitube Longitube:(CLLocationDegrees)longitube;
+- (void)findMap:(GMSMapView *)mapView Latitube:(CLLocationDegrees)latitube Longitube:(CLLocationDegrees)longitube;
 
 - (void)geolocationLatitube:(CLLocationDegrees)latitube Longitube:(CLLocationDegrees)longitube locality:(localityBlock)locality;
 

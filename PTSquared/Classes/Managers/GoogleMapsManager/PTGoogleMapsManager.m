@@ -42,7 +42,7 @@
 
 - (void)geolocationLatitube:(CLLocationDegrees)latitube Longitube:(CLLocationDegrees)longitube locality:(localityBlock)locality
 {
-    CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     CLLocation *location = [[CLLocation alloc] initWithLatitude:latitube longitude:longitube];
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         if(error) {
@@ -50,7 +50,7 @@
             return;
         }
         if(placemarks) {
-            CLPlacemark *placemark = placemarks [0];
+            CLPlacemark *placemark = placemarks[0];
             NSArray *lines = placemark.addressDictionary[ @"FormattedAddressLines"];
             locality([lines componentsJoinedByString:@" "]);
         }
