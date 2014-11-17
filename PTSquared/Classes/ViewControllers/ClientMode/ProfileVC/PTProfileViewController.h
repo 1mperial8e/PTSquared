@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-@interface PTProfileViewController : UIViewController
+@interface PTProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

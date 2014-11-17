@@ -92,13 +92,21 @@ static NSString *const CMClientStoryBoardName= @"ClientMode";
 
 - (void)selectMenuItem:(NSInteger)controllerIndex
 {
-    if (![self.navigationController.topViewController isEqual:self.menuControllers[controllerIndex]]){
-        [self.navigationController popToRootViewControllerAnimated:NO];
-        [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:NO];
-        [self clearNavigationBar];
-        [self.navigationController configureNavigationBarItems:self.menuControllers[controllerIndex]];
-    }
-    [self.navigationController menuButtonPress];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (controllerIndex == self.menuControllers.count - 1) {
+            PTLogoutViewController *logoutController = [self.menuControllers lastObject];
+            logoutController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            [self presentViewController:logoutController animated:NO completion:nil];
+        } else {
+            if (![self.navigationController.topViewController isEqual:self.menuControllers[controllerIndex]]) {
+                [self.navigationController popToRootViewControllerAnimated:NO];
+                [self.navigationController setViewControllers:[NSArray arrayWithObject:self.menuControllers[controllerIndex]] animated:NO];
+                [self clearNavigationBar];
+                [self.navigationController configureNavigationBarItems:self.menuControllers[controllerIndex]];
+            }
+            [self.navigationController menuButtonPress];
+        }
+    });
 }
 
 @end

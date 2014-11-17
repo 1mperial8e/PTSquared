@@ -43,6 +43,8 @@
 		847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83A91A10DB6300F913F2 /* PTNutritionViewController.m */; };
 		847C83AD1A10DB7800F913F2 /* PTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */; };
 		847C83B01A10DB9100F913F2 /* PTWorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */; };
+		84BF53E51A163071004245C3 /* PTPersonalImageProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF53E41A163071004245C3 /* PTPersonalImageProfileCell.m */; };
+		84BF54011A164D28004245C3 /* PTHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF54001A164D28004245C3 /* PTHeaderTableViewCell.m */; };
 		84EF34BE1A1366A600C760A4 /* PTGoogleMapsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EF34BD1A1366A600C760A4 /* PTGoogleMapsManager.m */; };
 		972165EC7EE44F08813BE722 /* libPods-PTSquared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F1F2D3EE04A6087CB117B /* libPods-PTSquared.a */; };
 		ED6015F21A1101F90043120A /* PTGAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6015F11A1101F90043120A /* PTGAManager.m */; };
@@ -144,6 +146,10 @@
 		847C83AC1A10DB7800F913F2 /* PTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProfileViewController.m; sourceTree = "<group>"; };
 		847C83AE1A10DB9100F913F2 /* PTWorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTWorkoutsViewController.h; sourceTree = "<group>"; };
 		847C83AF1A10DB9100F913F2 /* PTWorkoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTWorkoutsViewController.m; sourceTree = "<group>"; };
+		84BF53E31A163071004245C3 /* PTPersonalImageProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPersonalImageProfileCell.h; sourceTree = "<group>"; };
+		84BF53E41A163071004245C3 /* PTPersonalImageProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTPersonalImageProfileCell.m; sourceTree = "<group>"; };
+		84BF53FF1A164D28004245C3 /* PTHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHeaderTableViewCell.h; sourceTree = "<group>"; };
+		84BF54001A164D28004245C3 /* PTHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHeaderTableViewCell.m; sourceTree = "<group>"; };
 		84EF34BC1A1366A600C760A4 /* PTGoogleMapsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGoogleMapsManager.h; sourceTree = "<group>"; };
 		84EF34BD1A1366A600C760A4 /* PTGoogleMapsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGoogleMapsManager.m; sourceTree = "<group>"; };
 		8DC69774AE0EE373CDC7B4C7 /* Pods-PTSquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTSquared.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTSquared/Pods-PTSquared.release.xcconfig"; sourceTree = "<group>"; };
@@ -301,12 +307,12 @@
 		847C83341A10BFB300F913F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84BF53E61A1632B5004245C3 /* Views */,
 				EDD5978E1A1533FC0049D59A /* DataModel */,
 				ED6015EE1A1101ED0043120A /* OtherClasses */,
 				ED6015ED1A1101E20043120A /* Cells */,
 				ED6015EC1A1101C00043120A /* Managers */,
 				847C83381A10BFB300F913F2 /* ViewControllers */,
-				847C83391A10BFB300F913F2 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -319,13 +325,6 @@
 				847C83431A10C3E100F913F2 /* LoginRegistration */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		847C83391A10BFB300F913F2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		847C833A1A10BFB300F913F2 /* Resources */ = {
@@ -620,6 +619,41 @@
 			path = WorkoutsVC;
 			sourceTree = "<group>";
 		};
+		84BF53E11A162FAC004245C3 /* ProfileCells */ = {
+			isa = PBXGroup;
+			children = (
+				84BF53FE1A164CC9004245C3 /* HeaderTableViewCell */,
+				84BF53E21A163036004245C3 /* PersonalImageProfileCell */,
+			);
+			path = ProfileCells;
+			sourceTree = "<group>";
+		};
+		84BF53E21A163036004245C3 /* PersonalImageProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				84BF53E31A163071004245C3 /* PTPersonalImageProfileCell.h */,
+				84BF53E41A163071004245C3 /* PTPersonalImageProfileCell.m */,
+			);
+			path = PersonalImageProfileCell;
+			sourceTree = "<group>";
+		};
+		84BF53E61A1632B5004245C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84BF53FE1A164CC9004245C3 /* HeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84BF53FF1A164D28004245C3 /* PTHeaderTableViewCell.h */,
+				84BF54001A164D28004245C3 /* PTHeaderTableViewCell.m */,
+			);
+			name = HeaderTableViewCell;
+			path = ../ProfileHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
 		84EF34BB1A13668300C760A4 /* GoogleMapsManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +679,7 @@
 		ED6015ED1A1101E20043120A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				84BF53E11A162FAC004245C3 /* ProfileCells */,
 				EDD6B1F91A1277B500DBEBBD /* MenuCell */,
 				ED6015F31A1116DC0043120A /* TutorialCell */,
 			);
@@ -937,8 +972,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				847C83591A10C45900F913F2 /* PTLoginViewController.m in Sources */,
+				84BF54011A164D28004245C3 /* PTHeaderTableViewCell.m in Sources */,
 				847C83A11A10DB1400F913F2 /* PTLogoutViewController.m in Sources */,
 				847C837B1A10D38000F913F2 /* PTTutorialViewController.m in Sources */,
+				84BF53E51A163071004245C3 /* PTPersonalImageProfileCell.m in Sources */,
 				847C83981A10DABF00F913F2 /* PTCMTutorialViewController.m in Sources */,
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
 				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
