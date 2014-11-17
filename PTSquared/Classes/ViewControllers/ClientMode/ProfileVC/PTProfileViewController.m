@@ -65,7 +65,7 @@ static CGFloat const PTPFooterHeight = 10;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    //TODO
+    //TODO - change dataSource add method for dataSource
     NSDictionary *cellsDictionary = self.profileDataSource[indexPath.section];
     NSArray *cellsArray = [cellsDictionary allValues][0];
     NSDictionary *cellDictionary = cellsArray[indexPath.row];
@@ -179,17 +179,19 @@ static CGFloat const PTPFooterHeight = 10;
     cell.personalImageBefore.image = [UIImage imageNamedFile:@"11"];
     cell.personalImageAfter.image = [UIImage imageNamedFile:@"22"];
     
-    cell.personalImageAfter.layer.cornerRadius = 16.0f;
-    cell.personalImageAfter.layer.backgroundColor = [UIColor grayColor].CGColor;
-    cell.personalImageAfter.layer.borderWidth = 1.0f;
-    cell.personalImageAfter.layer.masksToBounds = YES;
-    
-    cell.personalImageBefore.layer.cornerRadius = 16.0f;
-    cell.personalImageBefore.layer.backgroundColor = [UIColor grayColor].CGColor;
-    cell.personalImageBefore.layer.borderWidth = 1.0f;
-    cell.personalImageBefore.layer.masksToBounds = YES;
-    
+    cell.personalImageAfter = [self setCornerRadiusForImage:cell.personalImageAfter];
+    cell.personalImageBefore = [self setCornerRadiusForImage:cell.personalImageBefore];
+
     return cell;
+}
+
+- (UIImageView *)setCornerRadiusForImage:(UIImageView *)imageView
+{
+    imageView.layer.cornerRadius = 16.0f;
+    imageView.layer.backgroundColor = [UIColor grayColor].CGColor;
+    imageView.layer.borderWidth = 1.0f;
+    imageView.layer.masksToBounds = YES;
+    return imageView;
 }
 
 @end
