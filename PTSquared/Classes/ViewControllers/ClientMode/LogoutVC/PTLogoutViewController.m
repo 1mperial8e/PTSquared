@@ -55,6 +55,9 @@
     [self.cancelButton setBackgroundImage:[UIImage imageWithColor:[UIColor blueColor]] forState:UIControlStateHighlighted];
     self.confirmButton.layer.cornerRadius = 8.0;
     self.cancelButton.layer.cornerRadius = 8.0;
+    
+    self.confirmButton.layer.masksToBounds = YES;
+    self.cancelButton.layer.masksToBounds = YES;
 }
 
 - (void)createHideAnimation

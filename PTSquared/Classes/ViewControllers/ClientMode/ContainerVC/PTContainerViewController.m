@@ -95,8 +95,12 @@ static NSString *const CMClientStoryBoardName= @"ClientMode";
     dispatch_async(dispatch_get_main_queue(), ^{
         if (controllerIndex == self.menuControllers.count - 1) {
             PTLogoutViewController *logoutController = [self.menuControllers lastObject];
-            logoutController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-            [self presentViewController:logoutController animated:NO completion:nil];
+            UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+            rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+#ifdef __IPHONE_8_0
+            rootViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+#endif
+            [rootViewController presentViewController:logoutController animated:NO completion:nil];
         } else {
             if (![self.navigationController.topViewController isEqual:self.menuControllers[controllerIndex]]) {
                 [self.navigationController popToRootViewControllerAnimated:NO];

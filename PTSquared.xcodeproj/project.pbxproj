@@ -55,6 +55,8 @@
 		ED90414F1A13911C00E01B92 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414D1A13911C00E01B92 /* menu.png */; };
 		ED9041501A13911C00E01B92 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = ED90414E1A13911C00E01B92 /* 11.png */; };
 		ED9041521A13913200E01B92 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = ED9041511A13913200E01B92 /* 22.png */; };
+		EDCC78701A1A943600F29B4D /* PTGoalsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCC786F1A1A943600F29B4D /* PTGoalsTableViewCell.m */; };
+		EDCC78771A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCC78761A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m */; };
 		EDD5978C1A1533730049D59A /* PTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597881A1533720049D59A /* PTCoreDataManager.m */; };
 		EDD5978D1A1533730049D59A /* PTObjectDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978A1A1533730049D59A /* PTObjectDescription.m */; };
 		EDD597911A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978F1A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld */; };
@@ -167,6 +169,10 @@
 		ED90414D1A13911C00E01B92 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		ED90414E1A13911C00E01B92 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		ED9041511A13913200E01B92 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		EDCC786E1A1A943600F29B4D /* PTGoalsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGoalsTableViewCell.h; sourceTree = "<group>"; };
+		EDCC786F1A1A943600F29B4D /* PTGoalsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGoalsTableViewCell.m; sourceTree = "<group>"; };
+		EDCC78751A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGenericProfileTableViewCell.h; sourceTree = "<group>"; };
+		EDCC78761A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGenericProfileTableViewCell.m; sourceTree = "<group>"; };
 		EDD597871A1533720049D59A /* PTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCoreDataManager.h; sourceTree = "<group>"; };
 		EDD597881A1533720049D59A /* PTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCoreDataManager.m; sourceTree = "<group>"; };
 		EDD597891A1533720049D59A /* PTObjectDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTObjectDescription.h; path = ../PTObjectDescription.h; sourceTree = "<group>"; };
@@ -622,6 +628,8 @@
 		84BF53E11A162FAC004245C3 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
+				EDCC78741A1A9D3F00F29B4D /* PTGenericProfileTableViewCell */,
+				EDCC786D1A1A93E200F29B4D /* GoalsTableViewCell */,
 				84BF53FE1A164CC9004245C3 /* HeaderTableViewCell */,
 				84BF53E21A163036004245C3 /* PersonalImageProfileCell */,
 			);
@@ -756,6 +764,24 @@
 				ED9041071A1358EF00E01B92 /* PTMacros.h */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		EDCC786D1A1A93E200F29B4D /* GoalsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EDCC786E1A1A943600F29B4D /* PTGoalsTableViewCell.h */,
+				EDCC786F1A1A943600F29B4D /* PTGoalsTableViewCell.m */,
+			);
+			path = GoalsTableViewCell;
+			sourceTree = "<group>";
+		};
+		EDCC78741A1A9D3F00F29B4D /* PTGenericProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EDCC78751A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.h */,
+				EDCC78761A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m */,
+			);
+			path = PTGenericProfileTableViewCell;
 			sourceTree = "<group>";
 		};
 		EDD597861A1533720049D59A /* CoreData */ = {
@@ -989,6 +1015,7 @@
 				847C83331A10BF3300F913F2 /* AppDelegate.m in Sources */,
 				847C830E1A10BE2500F913F2 /* main.m in Sources */,
 				ED6015F61A1116F80043120A /* PTTutorialCell.m in Sources */,
+				EDCC78701A1A943600F29B4D /* PTGoalsTableViewCell.m in Sources */,
 				847C836F1A10D34100F913F2 /* PTAttendeesViewController.m in Sources */,
 				847C839E1A10DAFB00F913F2 /* PTContainerViewController.m in Sources */,
 				847C83A71A10DB4300F913F2 /* PTNutritionDetailsViewController.m in Sources */,
@@ -1006,6 +1033,7 @@
 				847C83A41A10DB2C00F913F2 /* PTMenuViewController.m in Sources */,
 				847C83AA1A10DB6300F913F2 /* PTNutritionViewController.m in Sources */,
 				847C83921A10DA6500F913F2 /* PTCMHomeScreenViewController.m in Sources */,
+				EDCC78771A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m in Sources */,
 				847C83781A10D37200F913F2 /* PTSessionDetailsViewController.m in Sources */,
 				847C837E1A10D38F00F913F2 /* PTWorkoutDetailsViewController.m in Sources */,
 				847C839B1A10DAE000F913F2 /* PTCMWorkoutDetailsViewController.m in Sources */,
