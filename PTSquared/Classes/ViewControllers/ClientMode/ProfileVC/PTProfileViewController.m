@@ -19,7 +19,7 @@ static NSString *const PTPCellFooterIdentifier = @"footerCell";
 static NSString *const PTPCellHeaderIdentifier = @"headerCell";
 
 static NSInteger const PTPSizeCell = 45;
-static NSInteger const PTPSizeCellImage = 210;
+static NSInteger const PTPSizeCellImage = 138;
 static CGFloat const PTPSectionHeaderHeight = 47;
 static CGFloat const PTPFooterHeight = 10;
 
@@ -38,6 +38,7 @@ static CGFloat const PTPFooterHeight = 10;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self configureDataSource];
     [self configureTableView];
 }
