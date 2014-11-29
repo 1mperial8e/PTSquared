@@ -98,9 +98,10 @@ static NSString *const CMClientStoryBoardName= @"ClientMode";
             UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
             rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
 #ifdef __IPHONE_8_0
-            rootViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-#endif
+            self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+#else
             [rootViewController presentViewController:logoutController animated:NO completion:nil];
+#endif
         } else {
             if (![self.navigationController.topViewController isEqual:self.menuControllers[controllerIndex]]) {
                 [self.navigationController popToRootViewControllerAnimated:NO];

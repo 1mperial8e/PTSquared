@@ -4,8 +4,10 @@
 //  Copyright (c) 2014 Thinkmobiles. All rights reserved.
 //
 
-#import "PTObjectDescription.h"
 #import <CoreData/CoreData.h>
+
+typedef void(^SuccessSearchResult)(NSArray *result);
+typedef void(^ErorrResult)(NSError *error);
 
 @interface PTCoreDataManager : NSObject
 
@@ -15,8 +17,10 @@
 
 + (id)sharedManager;
 
-+ (void)removeFromDB:(PTObjectDescription *)deleteObjectDescription withManagedObject:(NSManagedObject *)managedObject;
-+ (NSArray *)getAllEntities:(PTObjectDescription *)getObjectDescription;
++ (void)fetchAscendingEntitiesWithName:(NSString *)entityName sortedByAttributeName:(NSString *)attributeName ascending:(BOOL)ascending success:(SuccessSearchResult)success failure:(ErorrResult)failure;
++ (void)fetchEntitiesWithName:(NSString *)entityName success:(SuccessSearchResult)success failure:(ErorrResult)failure;
+
+- (void)saveContext;
 
 @end
 

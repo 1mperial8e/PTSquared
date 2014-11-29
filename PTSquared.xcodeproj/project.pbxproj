@@ -58,7 +58,6 @@
 		EDCC78701A1A943600F29B4D /* PTGoalsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCC786F1A1A943600F29B4D /* PTGoalsTableViewCell.m */; };
 		EDCC78771A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCC78761A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m */; };
 		EDD5978C1A1533730049D59A /* PTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD597881A1533720049D59A /* PTCoreDataManager.m */; };
-		EDD5978D1A1533730049D59A /* PTObjectDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978A1A1533730049D59A /* PTObjectDescription.m */; };
 		EDD597911A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDD5978F1A1535CE0049D59A /* PTSquaredDataBase.xcdatamodeld */; };
 		EDD597941A1536270049D59A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD597931A1536270049D59A /* CoreData.framework */; };
 		EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6B1E91A11ED4900DBEBBD /* UIColor+ColorAddition.m */; };
@@ -175,8 +174,6 @@
 		EDCC78761A1A9D3F00F29B4D /* PTGenericProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGenericProfileTableViewCell.m; sourceTree = "<group>"; };
 		EDD597871A1533720049D59A /* PTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCoreDataManager.h; sourceTree = "<group>"; };
 		EDD597881A1533720049D59A /* PTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCoreDataManager.m; sourceTree = "<group>"; };
-		EDD597891A1533720049D59A /* PTObjectDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTObjectDescription.h; path = ../PTObjectDescription.h; sourceTree = "<group>"; };
-		EDD5978A1A1533730049D59A /* PTObjectDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTObjectDescription.m; path = ../PTObjectDescription.m; sourceTree = "<group>"; };
 		EDD597901A1535CE0049D59A /* PTSquaredDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PTSquaredDataBase.xcdatamodel; sourceTree = "<group>"; };
 		EDD597931A1536270049D59A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EDD6B1E81A11ED4900DBEBBD /* UIColor+ColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorAddition.h"; sourceTree = "<group>"; };
@@ -789,18 +786,8 @@
 			children = (
 				EDD597871A1533720049D59A /* PTCoreDataManager.h */,
 				EDD597881A1533720049D59A /* PTCoreDataManager.m */,
-				EDD5978B1A1533730049D59A /* ObjectDescription */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		EDD5978B1A1533730049D59A /* ObjectDescription */ = {
-			isa = PBXGroup;
-			children = (
-				EDD597891A1533720049D59A /* PTObjectDescription.h */,
-				EDD5978A1A1533730049D59A /* PTObjectDescription.m */,
-			);
-			path = ObjectDescription;
 			sourceTree = "<group>";
 		};
 		EDD5978E1A1533FC0049D59A /* DataModel */ = {
@@ -1006,7 +993,6 @@
 				847C834D1A10C41300F913F2 /* PTCalendarAccessViewController.m in Sources */,
 				EDD6B1EA1A11ED4900DBEBBD /* UIColor+ColorAddition.m in Sources */,
 				842FFC781A137F8700829EA7 /* PTFacebookManager.m in Sources */,
-				EDD5978D1A1533730049D59A /* PTObjectDescription.m in Sources */,
 				EDD6B1F61A124DD800DBEBBD /* PTClientNavController.m in Sources */,
 				EDD6B1F01A1200AB00DBEBBD /* PTProfileManager.m in Sources */,
 				847C835C1A10C46700F913F2 /* PTTrainerLoginViewController.m in Sources */,

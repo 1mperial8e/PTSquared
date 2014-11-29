@@ -27,9 +27,11 @@ static NSString *const CDDataBaseName = @"PTSquaredDataBase";
     return coreDataManager;
 }
 
+#pragma mark - Private
+
 #pragma mark - CoreData
 
-- (NSManagedObjectContext*) managedObjectContext
+- (NSManagedObjectContext *)managedObjectContext
 {
     if (_managedObjectContext) {
         return _managedObjectContext;
@@ -64,7 +66,7 @@ static NSString *const CDDataBaseName = @"PTSquaredDataBase";
     
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]){
         [self backupDBIfError:storeURL];
-        NSLog(@"Problem with creating persistent store coordinator");
+        NSLog(@"Problem with creating persistent store coordinator, backUp DB created");
     }
     return _persistentStoreCoordinator;
 }
@@ -80,10 +82,8 @@ static NSString *const CDDataBaseName = @"PTSquaredDataBase";
 - (NSString *)nameForIncompatibleStore
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
     [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
-    
     return [NSString stringWithFormat:@"%@.sqlite", [dateFormatter stringFromDate:[NSDate date]]];
 }
 
@@ -96,45 +96,57 @@ static NSString *const CDDataBaseName = @"PTSquaredDataBase";
         NSURL *corruptedURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[self nameForIncompatibleStore]];
         NSError *error;
         [fileManager moveItemAtURL:urlOfDB toURL:corruptedURL error:&error];
-        
-        NSString *title= @"Warning";
-        NSString *applicationName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-        NSString *message = [NSString stringWithFormat:@"A serious application error occurred while %@ tried to read your data. Please contact support for help.", applicationName];
-        UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alerView show];
+        [self showAlert];
     }
 }
 
-#pragma mark - Data Managment
-
-+ (void)removeFromDB:(PTObjectDescription *)deleteObjectDescription withManagedObject:(NSManagedObject *)managedObject
+- (void)showAlert
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:deleteObjectDescription.entityName];
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:deleteObjectDescription.sortDescriptorKey ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    
-    NSError *error;
-    NSArray *result = [deleteObjectDescription.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    for (managedObject in result){
-        if ([[managedObject valueForKeyPath:deleteObjectDescription.keyPath] isEqual:deleteObjectDescription.sortingParameter]) {
-            [managedObject.managedObjectContext deleteObject:managedObject];
-            NSError *err;
-            if (![managedObject.managedObjectContext save:&err]){
-                NSLog(@"Error during deleting - %@", err.localizedDescription);
-            }
-        }
+    NSString *applicationName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    NSString *message = [NSString stringWithFormat:@"A serious application error occurred while %@ tried to read your data. Please contact support for help.", applicationName];
+    [[[UIAlertView alloc] initWithTitle:@"Warning" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
+#pragma mark - Public
+
+- (void)saveContext
+{
+    NSError *saveError;
+    if(![self.managedObjectContext save:&saveError]) {
+        NSLog(@"\nCant save context in to DB due to error - %@.\nReason - %@.\n", saveError.localizedDescription, saveError.localizedFailureReason);
     }
 }
 
-+ (NSArray *)getAllEntities:(PTObjectDescription *)getObjectDescription
+#pragma mark - DataManagment
+
++ (void)fetchAscendingEntitiesWithName:(NSString *)entityName sortedByAttributeName:(NSString *)attributeName ascending:(BOOL)ascending success:(SuccessSearchResult)success failure:(ErorrResult)failure
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:getObjectDescription.entityName];
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:getObjectDescription.sortDescriptorKey ascending:YES];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:entityName];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:attributeName ascending:ascending];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
     NSError *error;
-    NSArray *result = [getObjectDescription.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    return result;
+    NSArray *result = [[[PTCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        failure(error);
+    } else {
+        success(result);
+    }
+}
+
++ (void)fetchEntitiesWithName:(NSString *)entityName success:(SuccessSearchResult)success failure:(ErorrResult)failure
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityForSearch = [NSEntityDescription entityForName:entityName inManagedObjectContext:[[PTCoreDataManager sharedManager] managedObjectContext]];
+    [fetchRequest setEntity:entityForSearch];
+    
+    NSError *error;
+    NSArray *result = [[[PTCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        failure(error);
+    } else {
+        success(result);
+    }
 }
 
 @end
